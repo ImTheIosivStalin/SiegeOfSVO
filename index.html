@@ -1,26 +1,184 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
 
-    <link rel="stylesheet" href="style.css">
+    <title>Siege of SVO</title>
+
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
+
 </head>
 
 <body>
 
-<section class="hero">
-    <div class="overlay">
+    <!-- Фон -->
+    <div class="background-grid"></div>
 
-        <h1>Добро пожаловать!</h1>
+    <!-- ================= NAVBAR ================= -->
 
-        <p>Это пример сайта с изображением на фоне.</p>
+    <header class="navbar">
 
-        <a href="#" class="btn">Подробнее</a>
+        <div class="logo">
 
-    </div>
-</section>
+            <span class="siege">SIEGE</span>
+
+            <span class="of">of</span>
+
+            <span class="svo">SVO</span>
+
+        </div>
+
+        <nav>
+
+            <a href="#events" data-lang="nav_events">
+                Об ивентах
+            </a>
+
+            <a href="#vehicles" data-lang="nav_vehicles">
+                Техника
+            </a>
+
+            <a href="#team" data-lang="nav_team">
+                Команда
+            </a>
+
+            <a href="#updates" data-lang="nav_updates">
+                Обновления
+            </a>
+
+        </nav>
+
+        <div class="right">
+
+            <button id="language">
+                🌐 RU
+            </button>
+
+            <a
+                class="join-top"
+                href="https://discord.gg/7cjc6wmrK"
+                target="_blank">
+
+                УЧАСТВОВАТЬ
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-box">
+
+            <h1>
+
+                <span class="gold">
+                    SIEGE
+                </span>
+
+                <span class="gold-small">
+                    of
+                </span>
+
+                <span class="orange">
+                    SVO
+                </span>
+
+            </h1>
+
+            <div class="line"></div>
+
+            <p data-lang="hero_description">
+
+                Создавайте собственное ЧВК и добивайтесь победы,
+                продумывайте тактику и учитесь сражаться.
+
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    class="join"
+                    href="https://discord.gg/7cjc6wmrK"
+                    target="_blank"
+                    data-lang="join">
+
+                    УЧАСТВОВАТЬ
+
+                </a>
+
+                <a
+                    class="vehicles"
+                    href="#vehicles"
+                    data-lang="vehicles">
+
+                    ОСМОТР ТЕХНИКИ
+
+                </a>
+
+            </div>
+
+            <div
+                class="scroll"
+                data-lang="scroll">
+
+                ПРОКРУТИТЕ ДЛЯ ПРОДОЛЖЕНИЯ
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= EVENTS ================= -->
+
+    <section id="events">
+
+    </section>
+
+    <!-- ================= VEHICLES ================= -->
+
+    <section id="vehicles">
+
+    </section>
+
+    <!-- ================= TEAM ================= -->
+
+    <section id="team">
+
+    </section>
+
+    <!-- ================= UPDATES ================= -->
+
+    <section id="updates">
+
+    </section>
+
+    <!-- ================= FAQ ================= -->
+
+    <section id="faq">
+
+    </section>
+
+    <!-- JS -->
+
+    <script src="js/main.js"></script>
+
+    <script src="js/language.js"></script>
 
 </body>
+
 </html>
