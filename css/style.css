@@ -1,6 +1,11 @@
-/* ===========================
+/* =======================================================
+   Siege of SVO v2.0
+   Base Style
+======================================================= */
+
+/* -----------------------------
    ШРИФТЫ
-=========================== */
+------------------------------ */
 
 @font-face{
     font-family:"Cinzel";
@@ -12,9 +17,33 @@
     src:url("../fonts/BebasNeue-Regular.ttf");
 }
 
-/* ===========================
+/* -----------------------------
+   ПЕРЕМЕННЫЕ
+------------------------------ */
+
+:root{
+
+    --bg:#070707;
+    --bg2:#0d0d0d;
+
+    --card:#111111;
+    --card2:#181818;
+
+    --orange:#ff6200;
+    --orange2:#ff7a1a;
+
+    --gold:#d6a34d;
+
+    --white:#ffffff;
+    --gray:#b6b6b6;
+
+    --border:rgba(255,255,255,.08);
+
+}
+
+/* -----------------------------
    СБРОС
-=========================== */
+------------------------------ */
 
 *{
     margin:0;
@@ -23,24 +52,28 @@
 }
 
 html{
+
     scroll-behavior:smooth;
+
 }
 
 body{
 
-    background:#070707;
+    background:var(--bg);
 
     color:white;
 
+    font-family:Arial,Helvetica,sans-serif;
+
     overflow-x:hidden;
 
-    font-family:Arial,Helvetica,sans-serif;
+    position:relative;
 
 }
 
-/* ===========================
-   ОСНОВНОЙ ФОН
-=========================== */
+/* -----------------------------
+   ФОН
+------------------------------ */
 
 body::before{
 
@@ -50,23 +83,51 @@ body::before{
 
     inset:0;
 
-    pointer-events:none;
-
     background:
 
-    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        radial-gradient(circle at top left,
+        rgba(255,98,0,.12),
+        transparent 35%),
 
-    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+        radial-gradient(circle at bottom right,
+        rgba(255,98,0,.08),
+        transparent 40%);
 
-    background-size:70px 70px;
+    pointer-events:none;
 
-    opacity:.18;
+    z-index:-4;
+
+}
+
+/* -----------------------------
+   СЕТКА
+------------------------------ */
+
+.background-grid{
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+
+        linear-gradient(90deg,
+        rgba(255,255,255,.025) 1px,
+        transparent 1px);
+
+    background-size:60px 60px;
+
+    opacity:.35;
 
     z-index:-3;
 
 }
 
-/* темный градиент */
+/* -----------------------------
+   ДОПОЛНИТЕЛЬНЫЙ СЛОЙ
+------------------------------ */
 
 body::after{
 
@@ -76,216 +137,141 @@ body::after{
 
     inset:0;
 
-    pointer-events:none;
-
     background:
 
-    radial-gradient(circle at left,#ff5b0020,transparent 35%),
+    radial-gradient(circle,
+    transparent 60%,
+    rgba(0,0,0,.55));
 
-    radial-gradient(circle at right,#ff5b0020,transparent 35%),
-
-    radial-gradient(circle at top,#ff4a0020,transparent 25%),
-
-    radial-gradient(circle at bottom,#ff4a0020,transparent 25%);
+    pointer-events:none;
 
     z-index:-2;
 
 }
 
-/* ===========================
-   HUD ЛИНИИ
-=========================== */
+/* -----------------------------
+   КОНТЕЙНЕР
+------------------------------ */
 
-.background-grid{
+.container{
 
-    position:fixed;
+    width:min(1400px,92%);
 
-    inset:0;
-
-    pointer-events:none;
-
-    z-index:-1;
+    margin:auto;
 
 }
 
-.background-grid::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:25px;
-
-    left:25px;
-
-    width:55px;
-
-    height:55px;
-
-    border-left:3px solid #ff6200;
-
-    border-top:3px solid #ff6200;
-
-}
-
-.background-grid::after{
-
-    content:"";
-
-    position:absolute;
-
-    right:25px;
-
-    top:25px;
-
-    width:55px;
-
-    height:55px;
-
-    border-right:3px solid #ff6200;
-
-    border-top:3px solid #ff6200;
-
-}
-
-/* нижние */
-
-.hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    bottom:30px;
-
-    left:25px;
-
-    width:55px;
-
-    height:55px;
-
-    border-left:3px solid #ff6200;
-
-    border-bottom:3px solid #ff6200;
-
-}
-
-.hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    bottom:30px;
-
-    right:25px;
-
-    width:55px;
-
-    height:55px;
-
-    border-right:3px solid #ff6200;
-
-    border-bottom:3px solid #ff6200;
-
-}
-
-/* ===========================
-   ПРОДОЛЖЕНИЕ СТРАНИЦЫ
-=========================== */
+/* -----------------------------
+   SECTION
+------------------------------ */
 
 section{
 
     position:relative;
 
-}
-
-#events,
-#vehicles,
-#team,
-#updates{
-
-    min-height:100vh;
-
-    padding:140px 8%;
-
-    border-top:1px solid rgba(255,98,0,.15);
+    padding:170px 0;
 
 }
 
-/* ===========================
+/* -----------------------------
    ЗАГОЛОВКИ
-=========================== */
+------------------------------ */
 
-.gold{
-
-    font-family:"Cinzel";
-
-    color:#e7c46b;
-
-}
-
-.orange{
+h1,
+h2,
+h3{
 
     font-family:"Bebas";
 
-    color:#ff6200;
+    letter-spacing:2px;
 
 }
 
-/* ===========================
-   КНОПКИ
-=========================== */
+h2{
+
+    font-size:60px;
+
+}
+
+p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+}
+
+/* -----------------------------
+   ССЫЛКИ
+------------------------------ */
 
 a{
+
+    color:inherit;
 
     text-decoration:none;
 
 }
 
+/* -----------------------------
+   КНОПКИ
+------------------------------ */
+
 button{
 
     cursor:pointer;
 
-}
+    border:none;
 
-.join,
-.join-top{
+    outline:none;
 
-    transition:.3s;
-
-}
-
-.join:hover,
-.join-top:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:0 0 25px #ff6200;
+    font:inherit;
 
 }
 
-.vehicles{
+/* -----------------------------
+   КАРТОЧКИ
+------------------------------ */
 
-    transition:.3s;
+.card{
+
+    background:rgba(20,20,20,.82);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:18px;
 
 }
 
-.vehicles:hover{
+/* -----------------------------
+   ORANGE LINE
+------------------------------ */
 
-    border-color:#ff6200;
+.orange-line{
 
-    box-shadow:0 0 20px rgba(255,98,0,.4);
+    width:130px;
+
+    height:3px;
+
+    background:linear-gradient(
+    to right,
+    transparent,
+    var(--orange),
+    transparent);
+
+    margin:25px auto;
 
 }
 
-/* ===========================
-   ПОЛОСА ПРОКРУТКИ
-=========================== */
+/* -----------------------------
+   SCROLLBAR
+------------------------------ */
 
 ::-webkit-scrollbar{
 
-    width:9px;
+    width:10px;
 
 }
 
@@ -297,8 +283,88 @@ button{
 
 ::-webkit-scrollbar-thumb{
 
-    background:#ff6200;
+    background:linear-gradient(
+    var(--orange),
+    #ff8a33);
 
-    border-radius:20px;
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ff8a33;
+
+}
+
+/* -----------------------------
+   ВЫДЕЛЕНИЕ
+------------------------------ */
+
+::selection{
+
+    background:var(--orange);
+
+    color:white;
+
+}
+
+/* -----------------------------
+   ИЗОБРАЖЕНИЯ
+------------------------------ */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* -----------------------------
+   ПЛАВНОСТЬ
+------------------------------ */
+
+.team-card,
+.update-card,
+.join,
+.vehicles,
+.navbar a{
+
+    transition:.35s ease;
+
+}
+
+/* -----------------------------
+   МЕЛКИЕ ЭФФЕКТЫ
+------------------------------ */
+
+.glow{
+
+    box-shadow:
+
+    0 0 15px rgba(255,98,0,.25),
+
+    0 0 35px rgba(255,98,0,.15);
+
+}
+
+/* -----------------------------
+   АДАПТИВ
+------------------------------ */
+
+@media(max-width:900px){
+
+    h2{
+
+        font-size:46px;
+
+    }
+
+    section{
+
+        padding:120px 0;
+
+    }
 
 }
