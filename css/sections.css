@@ -1,0 +1,797 @@
+/*==================================================
+    SECTIONS.CSS
+    Part 1
+==================================================*/
+
+/* ==========================
+   SECTION
+========================== */
+
+.section {
+
+    position: relative;
+
+    padding: 140px 0;
+
+}
+
+.container {
+
+    width: min(1200px, 92%);
+
+    margin: 0 auto;
+
+}
+
+.section-header {
+
+    text-align: center;
+
+    margin-bottom: 70px;
+
+}
+
+.section-tag {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border: 1px solid rgba(255,123,0,.25);
+
+    color: #ff7b00;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+}
+
+.section h2 {
+
+    font-size: 52px;
+
+    color: #d9b66b;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+
+}
+
+.section-line {
+
+    width: 140px;
+
+    height: 3px;
+
+    margin: auto;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ff7b00,
+        transparent
+    );
+
+}
+
+/* ==========================
+   EVENTS
+========================== */
+
+.events-layout {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+.events-text h3 {
+
+    font-size: 42px;
+
+    color: #d9b66b;
+
+    margin-bottom: 25px;
+
+}
+
+.events-text p {
+
+    color: #bdbdbd;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+
+    font-size: 17px;
+
+}
+
+.events-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 25px;
+
+}
+
+.event-card {
+
+    position: relative;
+
+    padding: 35px;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255,123,0,.15);
+
+    transition: .35s;
+
+    overflow: hidden;
+
+}
+
+.event-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        transparent,
+        rgba(255,123,0,.08),
+        transparent
+    );
+
+    opacity: 0;
+
+    transition: .35s;
+
+}
+
+.event-card:hover::before {
+
+    opacity: 1;
+
+}
+
+.event-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #ff7b00;
+
+    box-shadow: 0 0 35px rgba(255,123,0,.18);
+
+}
+
+.event-number {
+
+    font-size: 48px;
+
+    color: rgba(255,123,0,.25);
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+
+}
+
+.event-card h3 {
+
+    color: #f4c56b;
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+
+}
+
+.event-card p {
+
+    color: #bdbdbd;
+
+    line-height: 1.8;
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.events-text .join {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 15px;
+
+    padding: 14px 30px;
+
+    border: 1px solid #ff7b00;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .3s;
+
+}
+
+.events-text .join:hover {
+
+    background: #ff7b00;
+
+    box-shadow: 0 0 25px rgba(255,123,0,.3);
+
+}
+/*==================================================
+    SECTIONS.CSS
+    Part 2
+==================================================*/
+
+/* ==========================
+   VEHICLES
+========================== */
+
+.vehicles-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+.vehicle-card {
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255,123,0,.15);
+
+    overflow: hidden;
+
+    transition: .35s;
+
+}
+
+.vehicle-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #ff7b00;
+
+    box-shadow: 0 0 35px rgba(255,123,0,.2);
+
+}
+
+.vehicle-image {
+
+    height: 240px;
+
+    overflow: hidden;
+
+}
+
+.vehicle-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+
+}
+
+.vehicle-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+.vehicle-info {
+
+    padding: 28px;
+
+}
+
+.vehicle-info h3 {
+
+    color: #f4c56b;
+
+    margin-bottom: 12px;
+
+    font-size: 26px;
+
+}
+
+.vehicle-info p {
+
+    color: #bdbdbd;
+
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+
+}
+
+.vehicle-info a {
+
+    display: inline-block;
+
+    color: #ff7b00;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.vehicle-info a:hover {
+
+    color: #ffffff;
+
+}
+
+/* ==========================
+   TEAM
+========================== */
+
+.team-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+.team-card {
+
+    padding: 40px;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255,123,0,.15);
+
+    text-align: center;
+
+    transition: .35s;
+
+}
+
+.team-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #ff7b00;
+
+}
+
+.team-card h3 {
+
+    color: #f4c56b;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+}
+
+.team-card p {
+
+    color: #bdbdbd;
+
+    line-height: 1.8;
+
+}
+
+/* ==========================
+   UPDATES
+========================== */
+
+.updates-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+
+}
+
+.update-item {
+
+    padding: 35px;
+
+    border-left: 4px solid #ff7b00;
+
+    background: rgba(255,255,255,.03);
+
+    transition: .35s;
+
+}
+
+.update-item:hover {
+
+    background: rgba(255,255,255,.05);
+
+    transform: translateX(10px);
+
+}
+
+.update-item span {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #ff7b00;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+.update-item h3 {
+
+    color: #f4c56b;
+
+    margin-bottom: 15px;
+
+    font-size: 26px;
+
+}
+
+.update-item p {
+
+    color: #bdbdbd;
+
+    line-height: 1.8;
+
+}
+/*==================================================
+    SECTIONS.CSS
+    Part 3
+==================================================*/
+
+/* ==========================
+   FAQ
+========================== */
+
+.faq-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+.faq-item {
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255,123,0,.15);
+
+    padding: 30px;
+
+    transition: .35s;
+
+}
+
+.faq-item:hover {
+
+    border-color: #ff7b00;
+
+    transform: translateY(-5px);
+
+}
+
+.faq-item h3 {
+
+    color: #f4c56b;
+
+    margin-bottom: 15px;
+
+    font-size: 24px;
+
+}
+
+.faq-item p {
+
+    color: #bdbdbd;
+
+    line-height: 1.8;
+
+}
+
+/* ==========================
+   CTA
+========================== */
+
+.cta {
+
+    padding: 140px 0;
+
+    text-align: center;
+
+    background: linear-gradient(
+        180deg,
+        transparent,
+        rgba(255,123,0,.06),
+        transparent
+    );
+
+}
+
+.cta h2 {
+
+    color: #f4c56b;
+
+    font-size: 54px;
+
+    margin-bottom: 20px;
+
+}
+
+.cta p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #bdbdbd;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+
+}
+
+.cta .join {
+
+    display: inline-block;
+
+    padding: 18px 40px;
+
+    background: transparent;
+
+    border: 1px solid #ff7b00;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .35s;
+
+}
+
+.cta .join:hover {
+
+    background: #ff7b00;
+
+    box-shadow: 0 0 30px rgba(255,123,0,.3);
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+
+    border-top: 1px solid rgba(255,123,0,.15);
+
+    padding: 60px 0;
+
+}
+
+footer .container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+footer p {
+
+    color: #888;
+
+    font-size: 15px;
+
+}
+
+/* ==========================
+   TO TOP
+========================== */
+
+#toTop {
+
+    position: fixed;
+
+    right: 35px;
+
+    bottom: 35px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ff7b00;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 24px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .35s;
+
+    z-index: 999;
+
+}
+
+#toTop.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+#toTop:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 0 30px rgba(255,123,0,.4);
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:1100px){
+
+    .events-layout{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .vehicles-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .team-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .section{
+
+        padding:90px 0;
+
+    }
+
+    .section h2{
+
+        font-size:38px;
+
+    }
+
+    .events-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .vehicles-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .team-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    footer .container{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .cta h2{
+
+        font-size:40px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .section h2{
+
+        font-size:30px;
+
+    }
+
+    .events-text h3{
+
+        font-size:32px;
+
+    }
+
+    .cta h2{
+
+        font-size:32px;
+
+    }
+
+    .vehicle-image{
+
+        height:200px;
+
+    }
+
+}
