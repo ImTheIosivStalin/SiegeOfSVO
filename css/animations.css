@@ -1,0 +1,75 @@
+.hero h1{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    animation:title 1s forwards;
+
+}
+
+.line{
+
+    opacity:0;
+
+    animation:fade .8s forwards;
+
+    animation-delay:.4s;
+
+}
+
+.hero p{
+
+    opacity:0;
+
+    animation:fade .8s forwards;
+
+    animation-delay:.7s;
+
+}
+
+.buttons{
+
+    opacity:0;
+
+    animation:fade .8s forwards;
+
+    animation-delay:1s;
+
+}
+
+.scroll{
+
+    opacity:0;
+
+    animation:
+
+        fade .8s forwards,
+
+        scrollMove 2s infinite;
+
+    animation-delay:1.4s;
+
+}
+
+@keyframes title{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fade{
+
+    to{
+
+        opacity:1;
+
+    }
+
+}

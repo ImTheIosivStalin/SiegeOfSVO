@@ -1,0 +1,230 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 70px;
+
+    background:rgba(8,8,8,.82);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,98,0,.15);
+
+    z-index:9999;
+
+    transition:.35s;
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:10px;
+
+    cursor:pointer;
+
+}
+
+.siege{
+
+    font-family:"Cinzel";
+
+    font-size:30px;
+
+    color:#efd48d;
+
+    letter-spacing:2px;
+
+}
+
+.svo{
+
+    font-family:"Bebas";
+
+    font-size:48px;
+
+    color:#ff6200;
+
+    letter-spacing:4px;
+
+    text-shadow:
+
+    0 0 12px rgba(255,98,0,.45),
+
+    0 0 25px rgba(255,98,0,.35);
+
+}
+
+/* ===========================
+   MENU
+=========================== */
+
+nav{
+
+    display:flex;
+
+    gap:45px;
+
+}
+
+nav a{
+
+    color:#d8d8d8;
+
+    font-size:15px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+/* линия снизу */
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#ff6200;
+
+    transition:.35s;
+
+}
+
+nav a:hover{
+
+    color:white;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===========================
+   RIGHT
+=========================== */
+
+.right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+/* ===========================
+   LANGUAGE
+=========================== */
+
+#language{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    background:rgba(255,255,255,.03);
+
+    color:white;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+#language:hover{
+
+    border-color:#ff6200;
+
+    box-shadow:0 0 18px rgba(255,98,0,.5);
+
+    transform:rotate(15deg);
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.join-top{
+
+    padding:14px 26px;
+
+    border-radius:10px;
+
+    background:#ff6200;
+
+    color:white;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    transition:.35s;
+
+}
+
+.join-top:hover{
+
+    background:#ff7b18;
+
+}
+
+/* ===========================
+   SHRINK
+=========================== */
+
+.navbar.scrolled{
+
+    height:72px;
+
+    background:rgba(5,5,5,.95);
+
+}
