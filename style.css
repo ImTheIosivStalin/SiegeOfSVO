@@ -1,79 +1,304 @@
+/* ===========================
+   ШРИФТЫ
+=========================== */
+
+@font-face{
+    font-family:"Cinzel";
+    src:url("../fonts/Cinzel-Bold.ttf");
+}
+
+@font-face{
+    font-family:"Bebas";
+    src:url("../fonts/BebasNeue-Regular.ttf");
+}
+
+/* ===========================
+   СБРОС
+=========================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#111;
-    color:white;
-}
 
-.hero{
-
-    width:100%;
-    height:100vh;
-
-    background-image:url("images/cat.png");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-}
-
-.overlay{
-
-    background:rgba(0,0,0,.45);
-
-    padding:40px;
-
-    border-radius:15px;
-
-    text-align:center;
-
-}
-
-h1{
-
-    font-size:60px;
-
-    margin-bottom:20px;
-
-}
-
-p{
-
-    font-size:22px;
-
-    margin-bottom:30px;
-
-}
-
-.btn{
-
-    display:inline-block;
-
-    padding:15px 35px;
-
-    background:#2e8b57;
+    background:#070707;
 
     color:white;
+
+    overflow-x:hidden;
+
+    font-family:Arial,Helvetica,sans-serif;
+
+}
+
+/* ===========================
+   ОСНОВНОЙ ФОН
+=========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+    background-size:70px 70px;
+
+    opacity:.18;
+
+    z-index:-3;
+
+}
+
+/* темный градиент */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+    radial-gradient(circle at left,#ff5b0020,transparent 35%),
+
+    radial-gradient(circle at right,#ff5b0020,transparent 35%),
+
+    radial-gradient(circle at top,#ff4a0020,transparent 25%),
+
+    radial-gradient(circle at bottom,#ff4a0020,transparent 25%);
+
+    z-index:-2;
+
+}
+
+/* ===========================
+   HUD ЛИНИИ
+=========================== */
+
+.background-grid{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+.background-grid::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:25px;
+
+    left:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border-left:3px solid #ff6200;
+
+    border-top:3px solid #ff6200;
+
+}
+
+.background-grid::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:25px;
+
+    top:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border-right:3px solid #ff6200;
+
+    border-top:3px solid #ff6200;
+
+}
+
+/* нижние */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border-left:3px solid #ff6200;
+
+    border-bottom:3px solid #ff6200;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:30px;
+
+    right:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border-right:3px solid #ff6200;
+
+    border-bottom:3px solid #ff6200;
+
+}
+
+/* ===========================
+   ПРОДОЛЖЕНИЕ СТРАНИЦЫ
+=========================== */
+
+section{
+
+    position:relative;
+
+}
+
+#events,
+#vehicles,
+#team,
+#updates{
+
+    min-height:100vh;
+
+    padding:140px 8%;
+
+    border-top:1px solid rgba(255,98,0,.15);
+
+}
+
+/* ===========================
+   ЗАГОЛОВКИ
+=========================== */
+
+.gold{
+
+    font-family:"Cinzel";
+
+    color:#e7c46b;
+
+}
+
+.orange{
+
+    font-family:"Bebas";
+
+    color:#ff6200;
+
+}
+
+/* ===========================
+   КНОПКИ
+=========================== */
+
+a{
 
     text-decoration:none;
 
-    border-radius:10px;
+}
+
+button{
+
+    cursor:pointer;
+
+}
+
+.join,
+.join-top{
 
     transition:.3s;
 
 }
 
-.btn:hover{
+.join:hover,
+.join-top:hover{
 
-    transform:scale(1.05);
+    transform:translateY(-3px);
+
+    box-shadow:0 0 25px #ff6200;
+
+}
+
+.vehicles{
+
+    transition:.3s;
+
+}
+
+.vehicles:hover{
+
+    border-color:#ff6200;
+
+    box-shadow:0 0 20px rgba(255,98,0,.4);
+
+}
+
+/* ===========================
+   ПОЛОСА ПРОКРУТКИ
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:9px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#090909;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff6200;
+
+    border-radius:20px;
 
 }
