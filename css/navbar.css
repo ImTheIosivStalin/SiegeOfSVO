@@ -1,6 +1,6 @@
-/* ===========================
+/* =======================================================
    NAVBAR
-=========================== */
+======================================================= */
 
 .navbar{
 
@@ -11,7 +11,7 @@
 
     width:100%;
 
-    height:90px;
+    padding:22px 8%;
 
     display:flex;
 
@@ -19,23 +19,33 @@
 
     align-items:center;
 
-    padding:0 70px;
-
-    background:rgba(8,8,8,.82);
-
-    backdrop-filter:blur(12px);
-
-    border-bottom:1px solid rgba(255,98,0,.15);
-
-    z-index:9999;
+    z-index:1000;
 
     transition:.35s;
 
+    background:rgba(8,8,8,.15);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
 }
 
-/* ===========================
-   LOGO
-=========================== */
+/* после прокрутки */
+
+.navbar.scrolled{
+
+    background:rgba(8,8,8,.92);
+
+    border-bottom:1px solid rgba(255,98,0,.12);
+
+    box-shadow:
+
+    0 12px 40px rgba(0,0,0,.45);
+
+}
+
+/* ===================================== */
 
 .logo{
 
@@ -43,71 +53,107 @@
 
     align-items:flex-end;
 
-    gap:10px;
+    gap:8px;
 
     cursor:pointer;
 
-}
-
-.siege{
-
-    font-family:"Cinzel";
-
-    font-size:30px;
-
-    color:#efd48d;
-
-    letter-spacing:2px;
+    user-select:none;
 
 }
 
-.svo{
-
-    font-family:"Bebas";
-
-    font-size:48px;
-
-    color:#ff6200;
-
-    letter-spacing:4px;
-
-    text-shadow:
-
-    0 0 12px rgba(255,98,0,.45),
-
-    0 0 25px rgba(255,98,0,.35);
-
-}
-
-/* ===========================
-   MENU
-=========================== */
-
-nav{
-
-    display:flex;
-
-    gap:45px;
-
-}
-
-nav a{
-
-    color:#d8d8d8;
-
-    font-size:15px;
-
-    text-transform:uppercase;
-
-    letter-spacing:2px;
-
-    position:relative;
+.logo span{
 
     transition:.3s;
 
 }
 
-/* линия снизу */
+/* SIEGE */
+
+.logo .siege{
+
+    font-family:"Cinzel";
+
+    font-size:32px;
+
+    color:#d8a957;
+
+    letter-spacing:3px;
+
+}
+
+/* of */
+
+.logo .of{
+
+    font-family:"Cinzel";
+
+    font-size:17px;
+
+    color:#ffffff;
+
+    margin-bottom:4px;
+
+}
+
+/* SVO */
+
+.logo .svo{
+
+    font-family:"Bebas";
+
+    font-size:44px;
+
+    color:#ff6200;
+
+    letter-spacing:5px;
+
+    text-shadow:
+
+    0 0 12px rgba(255,98,0,.35);
+
+}
+
+.logo:hover .svo{
+
+    text-shadow:
+
+    0 0 18px rgba(255,98,0,.7),
+
+    0 0 30px rgba(255,98,0,.35);
+
+}
+
+.logo:hover .siege{
+
+    color:#f0c675;
+
+}
+
+/* ===================================== */
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:42px;
+
+}
+
+nav a{
+
+    position:relative;
+
+    font-size:15px;
+
+    color:#d8d8d8;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
 
 nav a::after{
 
@@ -125,7 +171,7 @@ nav a::after{
 
     background:#ff6200;
 
-    transition:.35s;
+    transition:.3s;
 
 }
 
@@ -141,9 +187,7 @@ nav a:hover::after{
 
 }
 
-/* ===========================
-   RIGHT
-=========================== */
+/* ===================================== */
 
 .right{
 
@@ -151,29 +195,33 @@ nav a:hover::after{
 
     align-items:center;
 
-    gap:18px;
+    gap:15px;
 
 }
 
-/* ===========================
-   LANGUAGE
-=========================== */
+/* ===================================== */
 
 #language{
 
-    width:52px;
+    width:46px;
 
-    height:52px;
+    height:46px;
 
-    border-radius:50%;
+    border-radius:12px;
 
-    border:1px solid rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.08);
 
     background:rgba(255,255,255,.03);
 
     color:white;
 
-    font-size:20px;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
 
     transition:.3s;
 
@@ -183,48 +231,98 @@ nav a:hover::after{
 
     border-color:#ff6200;
 
-    box-shadow:0 0 18px rgba(255,98,0,.5);
+    color:#ff6200;
 
-    transform:rotate(15deg);
+    background:rgba(255,98,0,.08);
 
 }
 
-/* ===========================
-   BUTTON
-=========================== */
+/* ===================================== */
 
 .join-top{
 
-    padding:14px 26px;
+    padding:13px 28px;
 
-    border-radius:10px;
+    border-radius:12px;
 
-    background:#ff6200;
+    background:linear-gradient(
+    180deg,
+    #ff7b20,
+    #ff6200);
 
     color:white;
 
-    font-weight:bold;
+    font-weight:700;
 
     letter-spacing:1px;
 
-    transition:.35s;
+    transition:.3s;
+
+    box-shadow:
+
+    0 0 20px rgba(255,98,0,.25);
 
 }
 
 .join-top:hover{
 
-    background:#ff7b18;
+    transform:translateY(-2px);
+
+    box-shadow:
+
+    0 0 28px rgba(255,98,0,.45);
 
 }
 
-/* ===========================
-   SHRINK
-=========================== */
+/* ===================================== */
 
-.navbar.scrolled{
+@media(max-width:1100px){
 
-    height:72px;
+    nav{
 
-    background:rgba(5,5,5,.95);
+        display:none;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .navbar{
+
+        padding:18px 5%;
+
+    }
+
+    .logo .siege{
+
+        font-size:24px;
+
+    }
+
+    .logo .svo{
+
+        font-size:34px;
+
+    }
+
+    .join-top{
+
+        padding:10px 18px;
+
+        font-size:13px;
+
+    }
+
+}
+nav a.active{
+
+    color:#ffffff;
+
+}
+
+nav a.active::after{
+
+    width:100%;
 
 }
