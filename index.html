@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
@@ -31,9 +32,7 @@
         <div class="logo">
 
             <span class="siege">SIEGE</span>
-
             <span class="of">of</span>
-
             <span class="svo">SVO</span>
 
         </div>
@@ -77,107 +76,191 @@
 
     </header>
 
-    <!-- ================= HERO ================= -->
+    <!-- ================= MAIN ================= -->
 
-    <section class="hero">
+    <main>
 
-        <div class="hero-box">
+        <!-- ================= HERO ================= -->
 
-            <h1>
+        <section class="hero">
 
-                <span class="gold">
-                    SIEGE
-                </span>
+            <div class="hero-box">
 
-                <span class="gold-small">
-                    of
-                </span>
+                <h1>
 
-                <span class="orange">
-                    SVO
-                </span>
+                    <span class="gold">SIEGE</span>
 
-            </h1>
+                    <span class="gold-small">of</span>
 
-            <div class="line"></div>
+                    <span class="orange">SVO</span>
 
-            <p data-lang="hero_description">
+                </h1>
 
-                Создавайте собственное ЧВК и добивайтесь победы,
-                продумывайте тактику и учитесь сражаться.
+                <div class="line"></div>
+
+                <p data-lang="hero_description">
+
+                    Создавайте собственное ЧВК и добивайтесь победы,
+                    продумывайте тактику и учитесь сражаться.
+
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        class="join"
+                        href="https://discord.gg/7cjc6wmrK"
+                        target="_blank"
+                        data-lang="join">
+
+                        УЧАСТВОВАТЬ
+
+                    </a>
+
+                    <a
+                        class="vehicles"
+                        href="#vehicles"
+                        data-lang="vehicles">
+
+                        ОСМОТР ТЕХНИКИ
+
+                    </a>
+
+                </div>
+
+                <div
+                    class="scroll"
+                    data-lang="scroll">
+
+                    ПРОКРУТИТЕ ДЛЯ ПРОДОЛЖЕНИЯ
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= EVENTS ================= -->
+
+        <section id="events" class="section">
+
+            <div class="container">
+
+                <h2 data-lang="events_title">
+                    ОБ ИВЕНТАХ
+                </h2>
+
+                <div class="section-line"></div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= VEHICLES ================= -->
+
+        <section id="vehicles" class="section">
+
+            <div class="container">
+
+                <h2 data-lang="vehicles_title">
+                    ТЕХНИКА
+                </h2>
+
+                <div class="section-line"></div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= TEAM ================= -->
+
+        <section id="team" class="section">
+
+            <div class="container">
+
+                <h2 data-lang="team_title">
+                    КОМАНДА
+                </h2>
+
+                <div class="section-line"></div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= UPDATES ================= -->
+
+        <section id="updates" class="section">
+
+            <div class="container">
+
+                <h2 data-lang="updates_title">
+                    ОБНОВЛЕНИЯ
+                </h2>
+
+                <div class="section-line"></div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= FAQ ================= -->
+
+        <section id="faq" class="section">
+
+            <div class="container">
+
+                <h2>
+                    FAQ
+                </h2>
+
+                <div class="section-line"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="logo">
+
+                <span class="siege">SIEGE</span>
+                <span class="of">of</span>
+                <span class="svo">SVO</span>
+
+            </div>
+
+            <p>
+
+                © 2026 Siege of SVO. All Rights Reserved.
 
             </p>
 
-            <div class="buttons">
-
-                <a
-                    class="join"
-                    href="https://discord.gg/7cjc6wmrK"
-                    target="_blank"
-                    data-lang="join">
-
-                    УЧАСТВОВАТЬ
-
-                </a>
-
-                <a
-                    class="vehicles"
-                    href="#vehicles"
-                    data-lang="vehicles">
-
-                    ОСМОТР ТЕХНИКИ
-
-                </a>
-
-            </div>
-
-            <div
-                class="scroll"
-                data-lang="scroll">
-
-                ПРОКРУТИТЕ ДЛЯ ПРОДОЛЖЕНИЯ
-
-            </div>
-
         </div>
 
-    </section>
+    </footer>
 
-    <!-- ================= EVENTS ================= -->
+    <!-- ================= TO TOP ================= -->
 
-    <section id="events">
+    <button id="toTop">
 
-    </section>
+        ↑
 
-    <!-- ================= VEHICLES ================= -->
+    </button>
 
-    <section id="vehicles">
-
-    </section>
-
-    <!-- ================= TEAM ================= -->
-
-    <section id="team">
-
-    </section>
-
-    <!-- ================= UPDATES ================= -->
-
-    <section id="updates">
-
-    </section>
-
-    <!-- ================= FAQ ================= -->
-
-    <section id="faq">
-
-    </section>
-
-    <!-- JS -->
+    <!-- ================= JS ================= -->
 
     <script src="js/main.js"></script>
-
     <script src="js/language.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/particles.js"></script>
 
 </body>
 
