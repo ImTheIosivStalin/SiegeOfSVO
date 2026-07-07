@@ -468,17 +468,22 @@
 
     position:relative;
 
-    background:rgba(20,20,20,.75);
+    overflow:hidden;
 
-    backdrop-filter:blur(14px);
+    background:
 
-    border:1px solid rgba(255,98,0,.12);
+        linear-gradient(
+        180deg,
+        rgba(22,22,22,.92),
+        rgba(14,14,14,.96));
+
+    border:1px solid rgba(255,255,255,.05);
 
     border-radius:18px;
 
-    overflow:hidden;
-
     transition:.35s;
+
+    backdrop-filter:blur(18px);
 
 }
 
@@ -498,7 +503,13 @@
 
     height:3px;
 
-    background:#ff6200;
+    background:
+
+        linear-gradient(
+        90deg,
+        transparent,
+        #ff6200,
+        transparent);
 
     transform:scaleX(0);
 
@@ -516,11 +527,13 @@
 
     transform:translateY(-10px);
 
-    border-color:#ff6200;
+    border-color:rgba(255,98,0,.45);
 
     box-shadow:
 
-    0 0 45px rgba(255,98,0,.18);
+        0 15px 40px rgba(0,0,0,.45),
+
+        0 0 30px rgba(255,98,0,.15);
 
 }
 
@@ -540,9 +553,9 @@
 
     height:18px;
 
-    border-top:2px solid rgba(255,98,0,.45);
+    border-top:2px solid rgba(255,98,0,.35);
 
-    border-right:2px solid rgba(255,98,0,.45);
+    border-right:2px solid rgba(255,98,0,.35);
 
 }
 
@@ -566,9 +579,11 @@
 
 .team-icon{
 
-    width:56px;
+    width:62px;
 
-    height:56px;
+    height:62px;
+
+    border-radius:14px;
 
     display:flex;
 
@@ -576,9 +591,7 @@
 
     align-items:center;
 
-    border-radius:14px;
-
-    background:rgba(255,98,0,.12);
+    background:rgba(255,98,0,.08);
 
     color:#ff6200;
 
@@ -592,7 +605,7 @@
 
     color:white;
 
-    transform:rotate(6deg);
+    transform:rotate(8deg);
 
 }
 
@@ -626,9 +639,9 @@
 
     gap:14px;
 
-    padding:14px 0;
+    color:#bfbfbf;
 
-    color:#c7c7c7;
+    padding:16px 0;
 
     border-bottom:1px solid rgba(255,255,255,.05);
 
@@ -654,9 +667,9 @@
 
     background:#ff6200;
 
-    box-shadow:0 0 12px #ff6200;
+    box-shadow:
 
-    flex-shrink:0;
+        0 0 12px #ff6200;
 
 }
 
