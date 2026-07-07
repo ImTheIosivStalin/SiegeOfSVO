@@ -468,52 +468,18 @@
 
     overflow:hidden;
 
-    background:
+    background:#0b0b0b;
 
-        linear-gradient(
-        180deg,
-        rgba(22,22,22,.92),
-        rgba(14,14,14,.96));
+    border:1px solid #2a2a2a;
 
-    border:1px solid rgba(255,255,255,.05);
+    border-radius:6px;
 
-    border-radius:18px;
-
-    transition:.35s;
-
-    backdrop-filter:blur(18px);
+    transition:.3s;
 
 }
 
 /* верхняя линия */
 
-.team-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    top:0;
-
-    width:100%;
-
-    height:3px;
-
-    background:
-
-        linear-gradient(
-        90deg,
-        transparent,
-        #ff6200,
-        transparent);
-
-    transform:scaleX(0);
-
-    transition:.35s;
-
-}
 
 .team-card:hover::before{
 
@@ -1268,8 +1234,9 @@ transition:.3s;
 
 .team-card:hover{
 
-border-color:#ff6a00;
-transform:translateY(-5px);
+border-color:#404040;
+
+transform:translateY(-4px);
 
 }
 
@@ -1428,23 +1395,6 @@ font-size:28px;
 
 }
 
-.team-card::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    right:0;
-
-    bottom:0;
-
-    height:2px;
-
-    background:#ff6a00;
-
-}
 
 /* декоративные углы */
 
@@ -1567,5 +1517,77 @@ font-size:28px;
 grid-template-columns:1fr;
 
 }
+
+}
+.team-card .corner{
+
+    position:absolute;
+
+    width:28px;
+
+    height:28px;
+
+    pointer-events:none;
+
+}
+.top-left{
+
+left:-1px;
+top:-1px;
+
+border-top:3px solid #555;
+border-left:3px solid #555;
+
+}
+
+.top-right{
+
+right:-1px;
+top:-1px;
+
+border-top:3px solid #555;
+border-right:3px solid #555;
+
+}
+
+.bottom-left{
+
+left:-1px;
+bottom:-1px;
+
+border-bottom:3px solid #555;
+border-left:3px solid #555;
+
+}
+
+.bottom-right{
+
+right:-1px;
+bottom:-1px;
+
+border-bottom:3px solid #555;
+border-right:3px solid #555;
+
+}
+.team-header{
+
+background:#111111;
+
+padding:24px;
+
+border-bottom:1px solid #242424;
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+}
+.team-card{
+
+box-shadow:
+
+inset 0 -2px 0 #8f3d09;
 
 }
