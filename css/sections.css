@@ -1563,3 +1563,63 @@ gap:18px;
     border-bottom:2px solid #8c430b;
 
 }
+.patch-note{
+    max-width:900px;
+    margin:auto;
+    background:#111;
+    border:1px solid #2d2d2d;
+    border-left:4px solid #ff6b00;
+    border-radius:10px;
+    overflow:hidden;
+    color:white;
+    font-family:Inter,sans-serif;
+}
+
+.patch-header{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 24px;
+    border-bottom:1px solid #222;
+}
+
+.version{
+    background:#5c2500;
+    color:#ff8a2a;
+    padding:8px 14px;
+    border-radius:6px;
+    font-weight:700;
+}
+
+.date{
+    color:#999;
+}
+
+.patch-note h1{
+    padding:24px;
+    margin:0;
+    font-size:38px;
+}
+
+.section{
+    padding:20px 24px;
+    border-top:1px solid #1d1d1d;
+}
+
+.section h2{
+    color:#ff8a2a;
+    margin-bottom:15px;
+}
+
+.item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:10px 0;
+    color:#d0d0d0;
+}
+
+.item::before{
+    content:"✔";
+    color:#00d46a;
+    font-weight:bold;
+}
