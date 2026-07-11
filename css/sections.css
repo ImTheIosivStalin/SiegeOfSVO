@@ -792,6 +792,79 @@ padding:18px 22px 26px;
     border-radius: 12px;
     border-left: 5px solid #ff6200;
 }
+.changelog-list {
+    max-width: 720px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.changelog-entry {
+    position: relative;
+}
+
+.entry-meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.version {
+    font-weight: 700;
+    color: #ff9c2b;
+    font-size: 17px;
+}
+
+.date {
+    color: #888;
+    font-size: 15px;
+}
+
+.entry-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.cat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 16px 0 8px;
+}
+
+.cat .icon {
+    font-size: 22px;
+}
+
+.added { color: #43d56b; }
+.optimize { color: #ff9c2b; }
+.map { color: #4fa8ff; }
+.fixes { color: #ff6b6b; }
+
+.changelog-entry ul {
+    list-style: none;
+    padding-left: 8px;
+    margin: 0;
+}
+
+.changelog-entry li {
+    padding: 6px 0;
+    color: #d0d0d0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.check {
+    color: #43d56b;
+    font-size: 18px;
+}
 
 /*==================================================
     SECTIONS.CSS
