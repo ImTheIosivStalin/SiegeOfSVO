@@ -363,168 +363,334 @@
                         TEAM
 ===================================================== */
 
-.team-section {
-    background: #070707;
-    padding: 120px 0;
-    font-family: 'Oxanium', sans-serif;
-    position: relative;
+.team-section{
+
+    padding:170px 8%;
+
+    position:relative;
+
 }
 
-.team-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 800px;
-    margin: 0 auto;
+.container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    padding:8px 20px;
+
+    border:1px solid rgba(255,98,0,.35);
+
+    color:#ff6200;
+
+    border-radius:30px;
+
+    letter-spacing:3px;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.section-header h2{
+
+    font-size:60px;
+
+    letter-spacing:4px;
+
+    color:white;
+
+}
+
+.section-line{
+
+    width:130px;
+
+    height:3px;
+
+    margin:25px auto;
+
+    background:
+        linear-gradient(
+        to right,
+        transparent,
+        #ff6200,
+        transparent);
+
+}
+
+.section-subtitle{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:#a8a8a8;
+
+    line-height:34px;
+
 }
 
 /* ============================ */
-/* ОСНОВНАЯ КАРТОЧКА */
-/* ============================ */
 
-.team-card {
-    position: relative;
-    background: rgba(255,255,255,.03);
-    border: 1px solid rgba(255,123,0,.15);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: .35s;
-}
+.team-cards{
 
-.team-card:hover {
-    transform: translateY(-8px);
-    border-color: #ff7b00;
-    box-shadow: 0 0 35px rgba(255,123,0,.18);
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
 }
 
 /* ============================ */
-/* ШАПКА КАРТОЧКИ */
+
+.team-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#0b0b0b;
+
+    border:1px solid #2a2a2a;
+
+    border-radius:6px;
+
+    transition:.3s;
+
+}
+
+/* верхняя линия */
+
+
+.team-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.team-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(255,98,0,.45);
+
+    box-shadow:
+
+        0 15px 40px rgba(0,0,0,.45),
+
+        0 0 30px rgba(255,98,0,.15);
+
+}
+
+/* углы */
+
+.team-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:18px;
+
+    top:18px;
+
+    width:18px;
+
+    height:18px;
+
+    border-top:2px solid rgba(255,98,0,.35);
+
+    border-right:2px solid rgba(255,98,0,.35);
+
+}
+
 /* ============================ */
 
-.team-header {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 24px 28px;
-    border-bottom: 1px solid rgba(255,255,255,.05);
-}
+.team-header{
 
-.team-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 12px;
-    background: rgba(255,98,0,.08);
-    color: #ff6200;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    flex-shrink: 0;
-    transition: .35s;
-}
+    display:flex;
 
-.team-card:hover .team-icon {
-    background: #ff6200;
-    color: white;
-    transform: rotate(8deg);
-}
+    align-items:center;
 
-.team-header h3 {
-    color: #f4c56b;
-    font-size: 26px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0;
+    gap:18px;
+
+    padding:28px;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
 }
 
 /* ============================ */
-/* СПИСОК УЧАСТНИКОВ */
+
+.team-icon{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,98,0,.08);
+
+    color:#ff6200;
+
+    transition:.35s;
+
+}
+
+.team-card:hover .team-icon{
+
+    background:#ff6200;
+
+    color:white;
+
+    transform:rotate(8deg);
+
+}
+
 /* ============================ */
 
-.team-members {
-    padding: 20px 28px 30px;
+.team-header h3{
+
+    color:white;
+
+    font-size:23px;
+
+    letter-spacing:2px;
+
 }
 
-.member {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    color: #bfbfbf;
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(255,255,255,.05);
-    transition: .3s;
-    font-size: 18px;
+/* ============================ */
+
+.team-members{
+
+    padding:22px 28px 30px;
+
 }
 
-.member:last-child {
-    border-bottom: none;
+/* ============================ */
+
+.member{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:#bfbfbf;
+
+    padding:16px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+    transition:.3s;
+
 }
 
-.member span {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #ff6200;
-    flex-shrink: 0;
-    box-shadow: 0 0 12px #ff6200;
-    transition: .3s;
+.member:last-child{
+
+    border:none;
+
 }
 
-.member:hover {
-    color: white;
-    padding-left: 10px;
+/* точка */
+
+.member span{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#ff6200;
+
+    box-shadow:
+
+        0 0 12px #ff6200;
+
 }
 
-.team-card:hover .member span {
-    box-shadow: 0 0 18px #ff6200, 0 0 30px #ff6200;
+.member:hover{
+
+    color:white;
+
+    padding-left:10px;
+
+}
+
+/* ============================ */
+
+.team-card:hover .member span{
+
+    box-shadow:
+
+    0 0 18px #ff6200,
+
+    0 0 30px #ff6200;
+
 }
 
 /* ============================ */
 /* АДАПТИВНОСТЬ */
 /* ============================ */
 
-@media (max-width: 768px) {
-    .team-cards {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-    }
-    
-    .team-header {
-        padding: 18px 20px;
-    }
-    
-    .team-header h3 {
-        font-size: 22px;
-    }
-    
-    .team-members {
-        padding: 16px 20px 24px;
-    }
-    
-    .member {
-        font-size: 16px;
-        padding: 12px 0;
-    }
+@media(max-width:1100px){
+
+.team-cards{
+
+grid-template-columns:1fr;
+
 }
 
-@media (max-width: 480px) {
-    .team-section {
-        padding: 80px 0;
-    }
-    
-    .team-header h3 {
-        font-size: 18px;
-    }
-    
-    .team-icon {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .member {
-        font-size: 14px;
-    }
+}
+
+@media(max-width:700px){
+
+.team-header{
+
+padding:22px;
+
+}
+
+.section-header h2{
+
+font-size:48px;
+
+}
+
+.team-members{
+
+padding:18px 22px 26px;
+
+}
+
 }
 
 /* ==========================
