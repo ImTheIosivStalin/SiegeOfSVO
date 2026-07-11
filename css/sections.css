@@ -363,334 +363,190 @@
                         TEAM
 ===================================================== */
 
-.team-section{
-
-    padding:170px 8%;
-
-    position:relative;
-
+.team-section {
+    background: #070707;
+    padding: 120px 0;
+    font-family: 'Oxanium', sans-serif;
+    position: relative;
 }
 
-.container{
-
-    max-width:1400px;
-
-    margin:auto;
-
-}
-
-.section-header{
-
-    text-align:center;
-
-    margin-bottom:80px;
-
-}
-
-.section-tag{
-
-    display:inline-block;
-
-    padding:8px 20px;
-
-    border:1px solid rgba(255,98,0,.35);
-
-    color:#ff6200;
-
-    border-radius:30px;
-
-    letter-spacing:3px;
-
-    font-size:13px;
-
-    text-transform:uppercase;
-
-    margin-bottom:18px;
-
-}
-
-.section-header h2{
-
-    font-size:60px;
-
-    letter-spacing:4px;
-
-    color:white;
-
-}
-
-.section-line{
-
-    width:130px;
-
-    height:3px;
-
-    margin:25px auto;
-
-    background:
-        linear-gradient(
-        to right,
-        transparent,
-        #ff6200,
-        transparent);
-
-}
-
-.section-subtitle{
-
-    max-width:720px;
-
-    margin:auto;
-
-    color:#a8a8a8;
-
-    line-height:34px;
-
+.team-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* ============================ */
+/* ОСНОВНАЯ КАРТОЧКА */
+/* ============================ */
 
-.team-cards{
+.team-card {
+    position: relative;
+    background: #090909;
+    border: 1px solid #363636;
+    transition: .25s;
+    overflow: visible; /* важно — чтобы углы не обрезались */
+}
 
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:35px;
-
+.team-card:hover {
+    border-color: #ff6a00;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255,106,0,.15);
 }
 
 /* ============================ */
+/* УГЛЫ (серые) — единый подход */
+/* ============================ */
 
-.team-card{
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:#0b0b0b;
-
-    border:1px solid #2a2a2a;
-
-    border-radius:6px;
-
-    transition:.3s;
-
+.team-card .corner {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    pointer-events: none;
+    z-index: 2;
 }
 
-/* верхняя линия */
+/* каждый угол — отдельно */
 
-
-.team-card:hover::before{
-
-    transform:scaleX(1);
-
+.team-card .corner-tl {
+    top: -1px;
+    left: -1px;
+    border-top: 3px solid #555;
+    border-left: 3px solid #555;
+    border-top-left-radius: 8px;
 }
 
-.team-card:hover{
-
-    transform:translateY(-10px);
-
-    border-color:rgba(255,98,0,.45);
-
-    box-shadow:
-
-        0 15px 40px rgba(0,0,0,.45),
-
-        0 0 30px rgba(255,98,0,.15);
-
+.team-card .corner-tr {
+    top: -1px;
+    right: -1px;
+    border-top: 3px solid #555;
+    border-right: 3px solid #555;
+    border-top-right-radius: 8px;
 }
 
-/* углы */
+.team-card .corner-bl {
+    bottom: -1px;
+    left: -1px;
+    border-bottom: 3px solid #555;
+    border-left: 3px solid #555;
+    border-bottom-left-radius: 8px;
+}
 
-.team-card::after{
+.team-card .corner-br {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 3px solid #555;
+    border-right: 3px solid #555;
+    border-bottom-right-radius: 8px;
+}
 
-    content:"";
+/* при ховере можно подсветить углы (опционально) */
 
-    position:absolute;
-
-    right:18px;
-
-    top:18px;
-
-    width:18px;
-
-    height:18px;
-
-    border-top:2px solid rgba(255,98,0,.35);
-
-    border-right:2px solid rgba(255,98,0,.35);
-
+.team-card:hover .corner-tl,
+.team-card:hover .corner-tr,
+.team-card:hover .corner-bl,
+.team-card:hover .corner-br {
+    border-color: #ff6a00;
+    transition: .25s;
 }
 
 /* ============================ */
+/* ШАПКА КАРТОЧКИ */
+/* ============================ */
 
-.team-header{
+.team-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 22px;
+    border-bottom: 1px solid #2d2d2d;
+    background: #111111;
+}
 
-    display:flex;
+.team-icon {
+    width: 46px;
+    height: 46px;
+    background: #1a120d;
+    border: 1px solid #5f3920;
+    color: #ff6a00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
 
-    align-items:center;
-
-    gap:18px;
-
-    padding:28px;
-
-    border-bottom:1px solid rgba(255,255,255,.05);
-
+.team-header h3 {
+    color: #ff6a00;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 /* ============================ */
-
-.team-icon{
-
-    width:62px;
-
-    height:62px;
-
-    border-radius:14px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:rgba(255,98,0,.08);
-
-    color:#ff6200;
-
-    transition:.35s;
-
-}
-
-.team-card:hover .team-icon{
-
-    background:#ff6200;
-
-    color:white;
-
-    transform:rotate(8deg);
-
-}
-
+/* СПИСОК УЧАСТНИКОВ */
 /* ============================ */
 
-.team-header h3{
-
-    color:white;
-
-    font-size:23px;
-
-    letter-spacing:2px;
-
+.team-members {
+    padding: 20px 22px 28px;
+    list-style: none;
+    margin: 0;
 }
 
-/* ============================ */
-
-.team-members{
-
-    padding:22px 28px 30px;
-
+.member {
+    position: relative;
+    color: #d8d8d8;
+    padding: 10px 0 10px 20px;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-/* ============================ */
-
-.member{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:14px;
-
-    color:#bfbfbf;
-
-    padding:16px 0;
-
-    border-bottom:1px solid rgba(255,255,255,.05);
-
-    transition:.3s;
-
+.member span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff6a00;
+    flex-shrink: 0;
+    box-shadow: 0 0 12px #ff6a00;
 }
 
-.member:last-child{
-
-    border:none;
-
-}
-
-/* точка */
-
-.member span{
-
-    width:8px;
-
-    height:8px;
-
-    border-radius:50%;
-
-    background:#ff6200;
-
-    box-shadow:
-
-        0 0 12px #ff6200;
-
-}
-
-.member:hover{
-
-    color:white;
-
-    padding-left:10px;
-
-}
-
-/* ============================ */
-
-.team-card:hover .member span{
-
-    box-shadow:
-
-    0 0 18px #ff6200,
-
-    0 0 30px #ff6200;
-
+.member:hover {
+    color: #fff;
+    padding-left: 26px;
 }
 
 /* ============================ */
 /* АДАПТИВНОСТЬ */
 /* ============================ */
 
-@media(max-width:1100px){
-
-.team-cards{
-
-grid-template-columns:1fr;
-
+@media (max-width: 700px) {
+    .team-cards {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
 }
 
-}
+@media (max-width: 700px) {
+    .team-header {
+        padding: 16px 18px;
+    }
 
-@media(max-width:700px){
+    .team-header h3 {
+        font-size: 24px;
+    }
 
-.team-header{
+    .team-members {
+        padding: 16px 18px 22px;
+    }
 
-padding:22px;
-
-}
-
-.section-header h2{
-
-font-size:48px;
-
-}
-
-.team-members{
-
-padding:18px 22px 26px;
-
-}
-
+    .member {
+        font-size: 17px;
+    }
 }
 
 /* ==========================
