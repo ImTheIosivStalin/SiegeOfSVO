@@ -450,6 +450,12 @@
 
 /* ============================ */
 
+.team-body{
+
+    padding:18px 24px 22px;
+
+}
+
 .team-cards{
 
     display:grid;
@@ -464,20 +470,25 @@
 
 .team-card{
 
-    position:relative;
+    display:flex;
+
+    flex-direction:column;
+
+    background:#101010;
+
+    border:1px solid #2b2b2b;
+
+    border-radius:10px;
 
     overflow:hidden;
 
-    background:#0b0b0b;
-
-    border:1px solid #2a2a2a;
-
-    border-radius:6px;
-
     transition:.3s;
 
-}
+    height:auto;
 
+    min-height:0;
+
+}
 /* верхняя линия */
 
 
@@ -489,37 +500,11 @@
 
 .team-card:hover{
 
-    transform:translateY(-10px);
+    transform:translateY(-4px);
 
-    border-color:rgba(255,98,0,.45);
+    border-color:#4a4a4a;
 
-    box-shadow:
-
-        0 15px 40px rgba(0,0,0,.45),
-
-        0 0 30px rgba(255,98,0,.15);
-
-}
-
-/* углы */
-
-.team-card::after{
-
-    content:"";
-
-    position:absolute;
-
-    right:18px;
-
-    top:18px;
-
-    width:18px;
-
-    height:18px;
-
-    border-top:2px solid rgba(255,98,0,.35);
-
-    border-right:2px solid rgba(255,98,0,.35);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
 
 }
 
@@ -527,18 +512,19 @@
 
 .team-header{
 
+    padding:20px 24px;
+
     display:flex;
 
     align-items:center;
 
-    gap:18px;
+    gap:16px;
 
-    padding:28px;
+    border-bottom:1px solid #232323;
 
-    border-bottom:1px solid rgba(255,255,255,.05);
+    background:#141414;
 
 }
-
 /* ============================ */
 
 .team-icon{
@@ -601,15 +587,19 @@
 
     align-items:center;
 
-    gap:14px;
+    gap:12px;
 
-    color:#bfbfbf;
+    padding:10px 0;
 
-    padding:16px 0;
+    border-bottom:1px solid #232323;
 
-    border-bottom:1px solid rgba(255,255,255,.05);
+    color:#c8c8c8;
 
-    transition:.3s;
+}
+
+.member:last-child{
+
+    border-bottom:none;
 
 }
 
@@ -1121,11 +1111,17 @@ footer p {
 
     }
 
-    .team-grid{
+.team-grid{
 
-        grid-template-columns:repeat(2,1fr);
+    display:grid;
 
-    }
+    grid-template-columns:repeat(3,minmax(300px,1fr));
+
+    gap:24px;
+
+    align-items:start;
+
+}
 
 }
 
@@ -1155,11 +1151,17 @@ footer p {
 
     }
 
-    .team-grid{
+.team-grid{
 
-        grid-template-columns:1fr;
+    display:grid;
 
-    }
+    grid-template-columns:repeat(3,minmax(300px,1fr));
+
+    gap:24px;
+
+    align-items:start;
+
+}
 
     footer .container{
 
@@ -1396,34 +1398,6 @@ font-size:28px;
 }
 
 
-/* декоративные углы */
-
-.team-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    pointer-events:none;
-
-    background:
-
-    linear-gradient(#505050,#505050) left 14px top/18px 2px no-repeat,
-    linear-gradient(#505050,#505050) left top 14px/2px 18px no-repeat,
-
-    linear-gradient(#505050,#505050) right 14px top/18px 2px no-repeat,
-    linear-gradient(#505050,#505050) right top 14px/2px 18px no-repeat,
-
-    linear-gradient(#505050,#505050) left 14px bottom/18px 2px no-repeat,
-    linear-gradient(#505050,#505050) left bottom 14px/2px 18px no-repeat,
-
-    linear-gradient(#505050,#505050) right 14px bottom/18px 2px no-repeat,
-    linear-gradient(#505050,#505050) right bottom 14px/2px 18px no-repeat;
-
-}
-
 .team-header{
 
     display:flex;
@@ -1531,59 +1505,43 @@ grid-template-columns:1fr;
 
 }
 .top-left{
-    position:absolute;
-    top:-1px;
-    left:-1px;
 
-    width:22px;
-    height:22px;
+left:-1px;
+top:-1px;
 
-    border-top:3px solid #555;
-    border-left:3px solid #555;
+border-top:3px solid #555;
+border-left:3px solid #555;
 
-    border-top-left-radius:8px;
 }
 
 .top-right{
-    position:absolute;
-    top:-1px;
-    right:-1px;
 
-    width:22px;
-    height:22px;
+right:-1px;
+top:-1px;
 
-    border-top:3px solid #555;
-    border-right:3px solid #555;
+border-top:3px solid #555;
+border-right:3px solid #555;
 
-    border-top-right-radius:8px;
 }
 
 .bottom-left{
-    position:absolute;
-    bottom:-1px;
-    left:-1px;
 
-    width:22px;
-    height:22px;
+left:-1px;
+bottom:-1px;
 
-    border-bottom:3px solid #555;
-    border-left:3px solid #555;
+border-bottom:3px solid #555;
+border-left:3px solid #555;
 
-    border-bottom-left-radius:8px;
 }
 
 .bottom-right{
-    position:absolute;
-    bottom:-1px;
-    right:-1px;
 
-    width:22px;
-    height:22px;
+right:-1px;
+bottom:-1px;
 
-    border-bottom:3px solid #555;
-    border-right:3px solid #555;
+border-bottom:3px solid #555;
+border-right:3px solid #555;
 
-    border-bottom-right-radius:8px;
 }
 .team-header{
 
@@ -1602,8 +1560,6 @@ gap:18px;
 }
 .team-card{
 
-box-shadow:
-
-inset 0 -2px 0 #8f3d09;
+    border-bottom:2px solid #8c430b;
 
 }
