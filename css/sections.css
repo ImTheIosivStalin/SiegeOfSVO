@@ -865,6 +865,216 @@ padding:18px 22px 26px;
     color: #43d56b;
     font-size: 18px;
 }
+.updates-section {
+  background: #050505;
+  color: #fff;
+  padding: 80px 20px 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.updates-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top, rgba(255, 90, 0, 0.10), transparent 35%),
+    radial-gradient(circle at center, rgba(255, 90, 0, 0.05), transparent 50%);
+  pointer-events: none;
+}
+
+.updates-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.updates-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.updates-title {
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 6rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #f4f4f4;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.08);
+}
+
+.updates-subtitle {
+  margin: 22px auto 0;
+  max-width: 760px;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.04em;
+}
+
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
+}
+
+.update-card {
+  background: rgba(0, 0, 0, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 4px solid rgba(255, 94, 0, 0.55);
+  box-shadow:
+    0 0 0 1px rgba(255, 94, 0, 0.08) inset,
+    0 10px 40px rgba(0, 0, 0, 0.55);
+  min-height: 520px;
+  position: relative;
+  overflow: hidden;
+}
+
+.update-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: linear-gradient(90deg, rgba(255, 94, 0, 0.95), rgba(255, 94, 0, 0.15));
+}
+
+.update-card-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 34px 34px 22px;
+  flex-wrap: wrap;
+}
+
+.update-version {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: rgba(255, 94, 0, 0.18);
+  border: 1px solid rgba(255, 94, 0, 0.28);
+  color: #ff7a2f;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.update-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.update-tag-icon,
+.update-date-icon {
+  display: inline-block;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+.update-card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 34px 28px;
+}
+
+.update-card-icon {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 94, 0, 0.06);
+  border: 1px solid rgba(255, 94, 0, 0.22);
+  color: #ff6a1a;
+  font-size: 2rem;
+}
+
+.update-card-title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.update-list {
+  list-style: none;
+  margin: 0;
+  padding: 10px 34px 38px;
+  display: grid;
+  gap: 24px;
+}
+
+.update-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.1rem;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+}
+
+.check-icon {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 255, 133, 0.06);
+  border: 1px solid rgba(0, 255, 133, 0.22);
+  color: #00ff88;
+  font-weight: 700;
+  box-shadow: 0 0 14px rgba(0, 255, 133, 0.08);
+  margin-top: 2px;
+}
+
+@media (max-width: 980px) {
+  .updates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .updates-title {
+    font-size: clamp(2.4rem, 10vw, 4.5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .updates-section {
+    padding: 60px 14px 80px;
+  }
+
+  .update-card-top,
+  .update-card-title-wrap,
+  .update-list {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .update-card-title-wrap {
+    gap: 14px;
+  }
+
+  .update-card-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 1.6rem;
+  }
+
+  .update-list li {
+    font-size: 1rem;
+  }
+}
 
 /*==================================================
     SECTIONS.CSS
