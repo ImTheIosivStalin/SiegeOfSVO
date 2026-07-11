@@ -363,6 +363,14 @@
                         TEAM
 ===================================================== */
 
+.team-section .section-header h2{
+    color:#ff6b1a;
+    font-size:46px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
 .team-section{
 
     padding:170px 8%;
