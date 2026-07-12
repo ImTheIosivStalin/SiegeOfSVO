@@ -1825,7 +1825,45 @@ grid-template-columns:1fr;
     pointer-events:none;
 
 }
+.top-left{
 
+left:-1px;
+top:-1px;
+
+border-top:3px solid #555;
+border-left:3px solid #555;
+
+}
+
+.top-right{
+
+right:-1px;
+top:-1px;
+
+border-top:3px solid #555;
+border-right:3px solid #555;
+
+}
+
+.bottom-left{
+
+left:-1px;
+bottom:-1px;
+
+border-bottom:3px solid #555;
+border-left:3px solid #555;
+
+}
+
+.bottom-right{
+
+right:-1px;
+bottom:-1px;
+
+border-bottom:3px solid #555;
+border-right:3px solid #555;
+
+}
 .team-header{
 
 background:#111111;
@@ -1945,23 +1983,6 @@ gap:18px;
 .update-card:hover::after{
     border-color:#ff6200;
 }
-/* Убираем все декоративные уголки */
-
-.team-card .corner,
-.top-left,
-.top-right,
-.bottom-left,
-.bottom-right{
-    display:none !important;
-    border:none !important;
-}
-
-/* Если уголки создаются псевдоэлементами */
-
-.team-card::before,
-.team-card::after{
-    content:none !important;
-}
 /* Полностью убираем декоративные уголки у карточек обновлений */
 
 .update-card::before,
@@ -1984,7 +2005,6 @@ gap:18px;
 .update-category .corner {
     display: none !important;
 }
-
 /* Единый фон для всех секций */
 
 .section,
@@ -1997,4 +2017,37 @@ gap:18px;
 #updates,
 #faq {
     background: transparent !important;
+}
+/* ======================================================
+                SECTION CONNECTOR FIX
+====================================================== */
+
+.section{
+
+    margin:0 !important;
+
+}
+
+.team-section{
+
+    margin:0 !important;
+
+}
+
+.updates-section{
+
+    margin:0 !important;
+
+}
+
+.cta{
+
+    margin:0 !important;
+
+}
+
+footer{
+
+    margin:0 !important;
+
 }
