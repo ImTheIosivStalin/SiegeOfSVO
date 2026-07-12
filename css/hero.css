@@ -461,3 +461,17 @@ width:100%;
     }
 
 }
+/* Соединение Hero с остальной страницей */
+
+.hero{
+
+    margin-bottom:0 !important;
+    padding-bottom:170px;
+
+}
+
+.hero + section{
+
+    margin-top:0 !important;
+
+}
