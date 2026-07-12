@@ -1984,3 +1984,17 @@ gap:18px;
 .update-category .corner {
     display: none !important;
 }
+
+/* Единый фон для всех секций */
+
+.section,
+.team-section,
+.updates-section,
+.cta,
+#events,
+#vehicles,
+#team,
+#updates,
+#faq {
+    background: transparent !important;
+}
