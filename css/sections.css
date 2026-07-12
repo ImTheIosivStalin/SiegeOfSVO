@@ -1945,3 +1945,20 @@ gap:18px;
 .update-card:hover::after{
     border-color:#ff6200;
 }
+/* Убираем все декоративные уголки */
+
+.team-card .corner,
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right{
+    display:none !important;
+    border:none !important;
+}
+
+/* Если уголки создаются псевдоэлементами */
+
+.team-card::before,
+.team-card::after{
+    content:none !important;
+}
