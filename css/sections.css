@@ -1962,3 +1962,25 @@ gap:18px;
 .team-card::after{
     content:none !important;
 }
+/* Полностью убираем декоративные уголки у карточек обновлений */
+
+.update-card::before,
+.update-card::after,
+.update-head::before,
+.update-head::after,
+.update-title::before,
+.update-title::after,
+.update-category::before,
+.update-category::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Если используются дополнительные corner-элементы */
+
+.update-card .corner,
+.update-head .corner,
+.update-title .corner,
+.update-category .corner {
+    display: none !important;
+}
