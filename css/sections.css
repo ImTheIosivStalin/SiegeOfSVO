@@ -1825,45 +1825,7 @@ grid-template-columns:1fr;
     pointer-events:none;
 
 }
-.top-left{
 
-left:-1px;
-top:-1px;
-
-border-top:3px solid #555;
-border-left:3px solid #555;
-
-}
-
-.top-right{
-
-right:-1px;
-top:-1px;
-
-border-top:3px solid #555;
-border-right:3px solid #555;
-
-}
-
-.bottom-left{
-
-left:-1px;
-bottom:-1px;
-
-border-bottom:3px solid #555;
-border-left:3px solid #555;
-
-}
-
-.bottom-right{
-
-right:-1px;
-bottom:-1px;
-
-border-bottom:3px solid #555;
-border-right:3px solid #555;
-
-}
 .team-header{
 
 background:#111111;
