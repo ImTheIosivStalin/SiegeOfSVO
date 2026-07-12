@@ -368,3 +368,53 @@ img{
     }
 
 }
+/* ======================================================
+                    GLOBAL CANVAS FIX
+====================================================== */
+
+html,
+body{
+    background:#070707;
+}
+
+main{
+    position:relative;
+    background:transparent;
+}
+
+/* Все секции используют единый фон */
+
+.hero,
+.section,
+.team-section,
+.updates-section,
+.cta,
+footer{
+
+    background:transparent !important;
+
+    border:none !important;
+
+    box-shadow:none !important;
+
+    position:relative;
+    z-index:1;
+
+}
+
+/* Убираем возможные разделители */
+
+.hero::after,
+.hero::before,
+.section::after,
+.section::before,
+.team-section::after,
+.team-section::before,
+.updates-section::after,
+.updates-section::before,
+.cta::after,
+.cta::before{
+
+    border:none !important;
+
+}
