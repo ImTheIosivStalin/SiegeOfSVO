@@ -1,0 +1,328 @@
+/* =======================================================
+   NAVBAR
+======================================================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:22px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:1000;
+
+    transition:.35s;
+
+    background:rgba(8,8,8,.15);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+/* после прокрутки */
+
+.navbar.scrolled{
+
+    background:rgba(8,8,8,.92);
+
+    border-bottom:1px solid rgba(255,98,0,.12);
+
+    box-shadow:
+
+    0 12px 40px rgba(0,0,0,.45);
+
+}
+
+/* ===================================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:8px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+.logo span{
+
+    transition:.3s;
+
+}
+
+/* SIEGE */
+
+.logo .siege{
+
+    font-family:"Cinzel";
+
+    font-size:32px;
+
+    color:#d8a957;
+
+    letter-spacing:3px;
+
+}
+
+/* of */
+
+.logo .of{
+
+    font-family:"Cinzel";
+
+    font-size:17px;
+
+    color:#ffffff;
+
+    margin-bottom:4px;
+
+}
+
+/* SVO */
+
+.logo .svo{
+
+    font-family:"Bebas";
+
+    font-size:44px;
+
+    color:#ff6200;
+
+    letter-spacing:5px;
+
+    text-shadow:
+
+    0 0 12px rgba(255,98,0,.35);
+
+}
+
+.logo:hover .svo{
+
+    text-shadow:
+
+    0 0 18px rgba(255,98,0,.7),
+
+    0 0 30px rgba(255,98,0,.35);
+
+}
+
+.logo:hover .siege{
+
+    color:#f0c675;
+
+}
+
+/* ===================================== */
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:42px;
+
+}
+
+nav a{
+
+    position:relative;
+
+    font-size:15px;
+
+    color:#d8d8d8;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#ff6200;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:white;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===================================== */
+
+.right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+/* ===================================== */
+
+#language{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.03);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+#language:hover{
+
+    border-color:#ff6200;
+
+    color:#ff6200;
+
+    background:rgba(255,98,0,.08);
+
+}
+
+/* ===================================== */
+
+.join-top{
+
+    padding:13px 28px;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+    180deg,
+    #ff7b20,
+    #ff6200);
+
+    color:white;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+
+    box-shadow:
+
+    0 0 20px rgba(255,98,0,.25);
+
+}
+
+.join-top:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+    0 0 28px rgba(255,98,0,.45);
+
+}
+
+/* ===================================== */
+
+@media(max-width:1100px){
+
+    nav{
+
+        display:none;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .navbar{
+
+        padding:18px 5%;
+
+    }
+
+    .logo .siege{
+
+        font-size:24px;
+
+    }
+
+    .logo .svo{
+
+        font-size:34px;
+
+    }
+
+    .join-top{
+
+        padding:10px 18px;
+
+        font-size:13px;
+
+    }
+
+}
+nav a.active{
+
+    color:#ffffff;
+
+}
+
+nav a.active::after{
+
+    width:100%;
+
+}

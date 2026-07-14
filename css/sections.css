@@ -1,0 +1,2604 @@
+/*==================================================
+    SECTIONS.CSS
+    Part 1
+==================================================*/
+
+/* ==========================
+   SECTION
+========================== */
+
+.section {
+
+    position: relative;
+
+    padding: 140px 0;
+
+}
+
+.container {
+
+    width: min(1200px, 92%);
+
+    margin: 0 auto;
+
+}
+
+.section-header {
+
+    text-align: center;
+
+    margin-bottom: 70px;
+
+}
+
+.section-tag {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border: 1px solid rgba(255,123,0,.25);
+
+    color: #ff7b00;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+}
+
+.section h2 {
+
+    font-size: 52px;
+
+    color: #d9b66b;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+
+}
+
+.section-line {
+
+    width: 140px;
+
+    height: 3px;
+
+    margin: auto;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ff7b00,
+        transparent
+    );
+
+}
+
+/* ==========================
+   EVENTS
+========================== */
+
+.events-layout {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+.events-text h3 {
+
+    font-size: 42px;
+
+    color: #d9b66b;
+
+    margin-bottom: 25px;
+
+}
+
+.events-text p {
+
+    color: #bdbdbd;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+
+    font-size: 17px;
+
+}
+
+.events-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(520px,1fr));
+
+    gap:35px;
+
+}
+
+.event-card {
+
+    position: relative;
+
+    padding: 35px;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255,123,0,.15);
+
+    transition: .35s;
+
+    overflow: hidden;
+
+}
+
+.event-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        transparent,
+        rgba(255,123,0,.08),
+        transparent
+    );
+
+    opacity: 0;
+
+    transition: .35s;
+
+}
+
+.event-card:hover::before {
+
+    opacity: 1;
+
+}
+
+.event-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #ff7b00;
+
+    box-shadow: 0 0 35px rgba(255,123,0,.18);
+
+}
+
+.event-number{
+
+    font-size:64px;
+
+    font-weight:800;
+
+    color:rgba(255,140,0,.35);
+
+    margin-bottom:20px;
+
+}
+
+.event-card h3 {
+
+    color: #f4c56b;
+
+    margin-bottom: 15px;
+
+     margin-top: -35px; /* подними заголовок выше */
+
+    font-size: 22px;
+
+}
+
+.event-card p {
+
+    color: #bdbdbd;
+
+    line-height: 1.8;
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.events-text .join {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 15px;
+
+    padding: 14px 30px;
+
+    border: 1px solid #ff7b00;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .3s;
+
+}
+
+.events-text .join:hover {
+
+    background: #ff7b00;
+
+    box-shadow: 0 0 25px rgba(255,123,0,.3);
+
+}
+/*==================================================
+    SECTIONS.CSS
+    Part 2
+==================================================*/
+
+/* ==========================
+   VEHICLES
+========================== */
+
+.vehicles-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+.vehicle-card {
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255,123,0,.15);
+
+    overflow: hidden;
+
+    transition: .35s;
+
+}
+
+.vehicle-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #ff7b00;
+
+    box-shadow: 0 0 35px rgba(255,123,0,.2);
+
+}
+
+.vehicle-image {
+
+    height: 240px;
+
+    overflow: hidden;
+
+}
+
+.vehicle-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+
+}
+
+.vehicle-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+.vehicle-info {
+
+    padding: 28px;
+
+}
+
+.vehicle-info h3 {
+
+    color: #f4c56b;
+
+    margin-bottom: 12px;
+
+    font-size: 26px;
+
+}
+
+.vehicle-info p {
+
+    color: #bdbdbd;
+
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+
+}
+
+.vehicle-info a {
+
+    display: inline-block;
+
+    color: #ff7b00;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.vehicle-info a:hover {
+
+    color: #ffffff;
+
+}
+
+/* =====================================================
+                        TEAM
+===================================================== */
+
+
+.team-section{
+
+    padding:170px 8%;
+
+    position:relative;
+
+}
+
+.container{
+
+    max-width:1500px;
+
+    margin:auto;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    padding:8px 20px;
+
+    border:1px solid rgba(255,98,0,.35);
+
+    color:#ff6200;
+
+    border-radius:30px;
+
+    letter-spacing:3px;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.section-header h2{
+
+    color:#ff8a2a;
+
+    font-size:60px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    line-height:1.1;
+
+    text-align:center;
+
+}
+
+.section-line{
+
+    width:130px;
+
+    height:3px;
+
+    margin:25px auto;
+
+    background:
+        linear-gradient(
+        to right,
+        transparent,
+        #ff6200,
+        transparent);
+
+}
+
+.section-subtitle{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:#a8a8a8;
+
+    line-height:34px;
+
+}
+
+/* ============================ */
+
+.team-body{
+
+    padding:18px 24px 22px;
+
+}
+
+.team-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+/* ============================ */
+
+.team-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#101010;
+
+    border:1px solid #2b2b2b;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    height:auto;
+
+    min-height:0;
+
+}
+/* верхняя линия */
+
+
+.team-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.team-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#4a4a4a;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+/* ============================ */
+
+.team-header{
+
+    padding:20px 24px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    border-bottom:1px solid #232323;
+
+    background:#141414;
+
+}
+/* ============================ */
+
+.team-icon{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,98,0,.08);
+
+    color:#ff6200;
+
+    transition:.35s;
+
+}
+
+.team-card:hover .team-icon{
+
+    background:#ff6200;
+
+    color:white;
+
+    transform:rotate(8deg);
+
+}
+
+/* ============================ */
+
+.team-header h3{
+
+    color:white;
+
+    font-size:23px;
+
+    letter-spacing:2px;
+
+}
+
+/* ============================ */
+
+.team-members{
+
+    padding:22px 28px 30px;
+
+}
+
+/* ============================ */
+
+.member{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:10px 0;
+
+    border-bottom:1px solid #232323;
+
+    color:#c8c8c8;
+
+}
+
+.member:last-child{
+
+    border-bottom:none;
+
+}
+
+.member:last-child{
+
+    border:none;
+
+}
+
+/* точка */
+
+.member span{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#ff6200;
+
+    box-shadow:
+
+        0 0 12px #ff6200;
+
+}
+
+.member:hover{
+
+    color:white;
+
+    padding-left:10px;
+
+}
+
+/* ============================ */
+
+.team-card:hover .member span{
+
+    box-shadow:
+
+    0 0 18px #ff6200,
+
+    0 0 30px #ff6200;
+
+}
+
+/* ============================ */
+/* АДАПТИВНОСТЬ */
+/* ============================ */
+
+@media(max-width:1100px){
+
+.team-cards{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.team-header{
+
+padding:22px;
+
+}
+
+.section-header h2{
+
+font-size:48px;
+
+}
+
+.team-members{
+
+padding:18px 22px 26px;
+
+}
+
+}
+
+/* =====================================================
+                    LAST UPDATES
+===================================================== */
+
+.updates-section{
+
+    padding:170px 8%;
+
+    position:relative;
+
+}
+
+/* ============================ */
+
+.updates-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:28px;
+
+    align-items:start;
+
+    max-width:1180px;
+
+    margin:70px auto 0;
+
+}
+
+/* ============================ */
+
+.update-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-self:start;
+
+    background:#101010;
+
+    border:1px solid #2b2b2b;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+/* верхняя оранжевая полоска */
+
+.update-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:3px;
+
+    background:#ff6200;
+
+    transform:scaleX(0);
+
+    transition:.35s;
+
+}
+
+/* нижняя полоска */
+
+.update-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:2px;
+
+    background:#ff6200;
+
+    opacity:.55;
+
+    transition:.35s;
+
+}
+
+/* ============================ */
+
+.update-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#ff6200;
+
+    box-shadow:
+        0 14px 35px rgba(255,98,0,.20);
+
+}
+
+.update-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.update-card:hover::after{
+
+    opacity:1;
+
+    box-shadow:0 0 14px #ff6200;
+
+}
+
+/* ============================ */
+
+.update-head{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 22px;
+
+    background:#151515;
+
+    border-bottom:1px solid #262626;
+
+    color:#9f9f9f;
+
+    font-size:14px;
+
+}
+.version{
+
+    color:#ff6200;
+
+    font-weight:700;
+
+}
+
+.date{
+
+    color:#8f8f8f;
+
+}
+
+/* ============================ */
+
+.update-title{
+
+    padding:20px 22px;
+
+    font-size:28px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    color:#fff;
+
+    border-bottom:1px solid #232323;
+
+}
+
+/* ============================ */
+
+.update-category{
+
+    padding:16px 22px;
+
+}
+
+.update-category:last-child{
+
+    border-bottom:none;
+
+}
+
+/* ============================ */
+
+.update-category h4{
+
+    font-size:17px;
+
+    margin-bottom:10px;
+
+    letter-spacing:.5px;
+
+}
+
+.added h4{
+
+    color:#43d56b;
+
+}
+
+.map h4{
+
+    color:#3ca6ff;
+
+}
+
+.optimize h4{
+
+    color:#ff9c2b;
+
+}
+
+.fixes h4{
+
+    color:#ffffff;
+
+}
+
+/* ============================ */
+
+.update-category ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.update-category li{
+
+    padding:5px 0;
+
+    line-height:1.45;
+
+}
+
+.update-category li:hover{
+
+    color:#ffffff;
+
+    padding-left:8px;
+
+}
+
+/* ============================ */
+
+@media(max-width:1200px){
+
+.updates-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ============================ */
+
+@media(max-width:800px){
+
+.updates-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* ============================ */
+
+@media(max-width:700px){
+
+.updates-section{
+
+padding:120px 8%;
+
+}
+
+.updates-section .section-header h2{
+
+font-size:46px;
+
+}
+
+.update-title{
+
+font-size:21px;
+
+}
+
+.update-head{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:8px;
+
+}
+
+}
+/*==================================================
+    SECTIONS.CSS
+    Part 3
+==================================================*/
+
+/* ==========================
+   FAQ
+========================== */
+
+.faq-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+.faq-item {
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255,123,0,.15);
+
+    padding: 30px;
+
+    transition: .35s;
+
+}
+
+.faq-item:hover {
+
+    border-color: #ff7b00;
+
+    transform: translateY(-5px);
+
+}
+
+.faq-item h3 {
+
+    color: #f4c56b;
+
+    margin-bottom: 15px;
+
+    font-size: 24px;
+
+}
+
+.faq-item p {
+
+    color: #bdbdbd;
+
+    line-height: 1.8;
+
+}
+
+/* ==========================
+   CTA
+========================== */
+
+.cta {
+
+    padding: 140px 0;
+
+    text-align: center;
+
+    background: linear-gradient(
+        180deg,
+        transparent,
+        rgba(255,123,0,.06),
+        transparent
+    );
+
+}
+
+.cta h2 {
+
+    color: #f4c56b;
+
+    font-size: 54px;
+
+    margin-bottom: 20px;
+
+}
+
+.cta p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #bdbdbd;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+
+}
+
+.cta .join {
+
+    display: inline-block;
+
+    padding: 18px 40px;
+
+    background: transparent;
+
+    border: 1px solid #ff7b00;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .35s;
+
+}
+
+.cta .join:hover {
+
+    background: #ff7b00;
+
+    box-shadow: 0 0 30px rgba(255,123,0,.3);
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+
+    border-top: 1px solid rgba(255,123,0,.15);
+
+    padding: 60px 0;
+
+}
+
+footer .container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+footer p {
+
+    color: #888;
+
+    font-size: 15px;
+
+}
+
+/* ==========================
+   TO TOP
+========================== */
+
+#toTop {
+
+    position: fixed;
+
+    right: 35px;
+
+    bottom: 35px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ff7b00;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 24px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .35s;
+
+    z-index: 999;
+
+}
+
+#toTop.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+#toTop:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 0 30px rgba(255,123,0,.4);
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:1500px){
+
+    .events-layout{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .vehicles-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+.team-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(300px,1fr));
+
+    gap:24px;
+
+    align-items:start;
+
+}
+
+}
+
+@media (max-width:768px){
+
+    .section{
+
+        padding:90px 0;
+
+    }
+
+    .section h2{
+
+        font-size:38px;
+
+    }
+
+    .events-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .vehicles-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+.team-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(300px,1fr));
+
+    gap:24px;
+
+    align-items:start;
+
+}
+
+    footer .container{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .cta h2{
+
+        font-size:40px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .section h2{
+
+        font-size:30px;
+
+    }
+
+    .events-text h3{
+
+        font-size:32px;
+
+    }
+
+    .cta h2{
+
+        font-size:32px;
+
+    }
+
+    .vehicle-image{
+
+        height:200px;
+
+    }
+
+.team-section,
+.updates-section{
+
+    padding:90px 0;
+
+}
+
+.updates-section h2{
+
+    font-size:46px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+}
+
+.updates-grid{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:60px;
+
+}
+
+.update-card{
+
+    width:360px;
+
+    background:#0d0d0d;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+}
+
+.update-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:3px;
+
+    background:#ff6b1a;
+
+    transition:.3s;
+
+}
+
+.update-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 25px rgba(255,107,26,.2);
+
+}
+
+.update-card:hover::after{
+
+    box-shadow:0 0 15px #ff6b1a;
+
+}
+
+.update-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:18px 24px;
+
+    font-size:15px;
+
+    color:#b5b5b5;
+
+}
+
+.version{
+
+    color:#ff7a22;
+
+    font-weight:700;
+
+}
+
+.update-card h3{
+
+    font-size:28px;
+
+    padding:0 24px;
+
+    margin-bottom:18px;
+
+    color:#fff;
+
+}
+
+.update-card hr{
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    margin-bottom:25px;
+
+}
+
+.category{
+
+    padding:0 24px 18px;
+
+}
+
+.category h4{
+
+    font-size:19px;
+
+    margin-bottom:12px;
+
+}
+
+.category ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.category li{
+
+    color:#c8c8c8;
+
+    margin-bottom:10px;
+
+    line-height:1.55;
+
+}
+
+.added h4{
+
+    color:#36d46d;
+
+}
+
+.map h4{
+
+    color:#4fa8ff;
+
+}
+
+.optimize h4{
+
+    color:#ff9b2f;
+
+}
+
+.fixes h4{
+
+    color:#ffffff;
+
+}
+
+@media(max-width:768px){
+
+.update-card{
+
+    width:100%;
+
+}
+
+.updates-section h2{
+
+    font-size:34px;
+
+}
+
+}
+
+.section-subtitle{
+    color:#8a8a8a;
+    margin-top:15px;
+    font-size:18px;
+}
+
+.team-cards{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+margin-top:60px;
+
+}
+
+.team-card{
+
+background:#111;
+border:1px solid #2f2f2f;
+padding:35px;
+transition:.3s;
+
+}
+
+.team-card:hover{
+
+border-color:#404040;
+
+transform:translateY(-4px);
+
+}
+
+.team-title{
+
+font-size:26px;
+font-weight:700;
+color:#ff6a00;
+margin-bottom:30px;
+
+}
+
+.team-card ul{
+
+list-style:none;
+padding:0;
+margin:0;
+
+}
+
+.team-card li{
+
+padding:12px 0;
+border-bottom:1px solid #242424;
+font-size:19px;
+
+}
+
+.update-box{
+
+margin-top:60px;
+display:flex;
+flex-direction:column;
+gap:25px;
+
+}
+
+.version{
+
+background:#111;
+border:1px solid #2d2d2d;
+padding:35px;
+transition:.3s;
+
+}
+
+.version:hover{
+
+border-color:#ff6a00;
+
+}
+
+.version-top{
+
+display:flex;
+gap:20px;
+align-items:center;
+margin-bottom:15px;
+
+}
+
+.version-tag{
+
+background:#ff6a00;
+padding:7px 16px;
+font-weight:700;
+color:#000;
+
+}
+
+.version-date{
+
+color:#8a8a8a;
+
+}
+
+.version h3{
+
+margin:15px 0 25px;
+font-size:36px;
+
+}
+
+.version ul{
+
+margin:0;
+padding-left:20px;
+
+}
+
+.version li{
+
+margin:12px 0;
+color:#cfcfcf;
+
+}
+
+@media(max-width:900px){
+
+.team-cards{
+
+grid-template-columns:1fr;
+
+}
+
+.version h3{
+
+font-size:28px;
+
+}
+
+}
+    
+}
+.team-section{
+
+    background:#070707;
+
+    padding:120px 0;
+
+    font-family:'Oxanium',sans-serif;
+
+}
+
+.team-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:26px;
+
+}
+
+.team-card{
+
+    position:relative;
+
+    background:#090909;
+
+    border:1px solid #363636;
+
+    transition:.25s;
+
+    overflow:hidden;
+
+}
+
+.team-card:hover{
+
+    border-color:#ff6a00;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 25px rgba(255,106,0,.15);
+
+}
+
+
+.team-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:18px 22px;
+
+    border-bottom:1px solid #2d2d2d;
+
+}
+
+.team-icon{
+
+    width:46px;
+
+    height:46px;
+
+    background:#1a120d;
+
+    border:1px solid #5f3920;
+
+    color:#ff6a00;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+}
+
+.team-title{
+
+    color:#ff6a00;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+}
+
+.team-card ul{
+
+    list-style:none;
+
+    padding:20px 22px 28px;
+
+    margin:0;
+
+}
+
+.team-card li{
+
+    position:relative;
+
+    color:#d8d8d8;
+
+    padding:10px 0 10px 20px;
+
+    font-size:19px;
+
+}
+
+.team-card li::before{
+
+    content:"■";
+
+    position:absolute;
+
+    left:0;
+
+    top:14px;
+
+    color:#ff6a00;
+
+    font-size:9px;
+
+}
+
+@media(max-width:1000px){
+
+.team-cards{
+
+grid-template-columns:1fr;
+
+}
+
+}
+.team-card .corner{
+
+    position:absolute;
+
+    width:28px;
+
+    height:28px;
+
+    pointer-events:none;
+
+}
+.top-left{
+
+left:-1px;
+top:-1px;
+
+border-top:3px solid #555;
+border-left:3px solid #555;
+
+}
+
+.top-right{
+
+right:-1px;
+top:-1px;
+
+border-top:3px solid #555;
+border-right:3px solid #555;
+
+}
+
+.bottom-left{
+
+left:-1px;
+bottom:-1px;
+
+border-bottom:3px solid #555;
+border-left:3px solid #555;
+
+}
+
+.bottom-right{
+
+right:-1px;
+bottom:-1px;
+
+border-bottom:3px solid #555;
+border-right:3px solid #555;
+
+}
+.team-header{
+
+background:#111111;
+
+padding:24px;
+
+border-bottom:1px solid #242424;
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+}
+.team-card{
+
+    border-bottom:2px solid #8c430b;
+
+}
+.patch-note{
+    max-width:900px;
+    margin:auto;
+    background:#111;
+    border:1px solid #2d2d2d;
+    border-left:4px solid #ff6b00;
+    border-radius:10px;
+    overflow:hidden;
+    color:white;
+    font-family:Inter,sans-serif;
+}
+
+.patch-header{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 24px;
+    border-bottom:1px solid #222;
+}
+
+.version{
+    background:#5c2500;
+    color:#ff8a2a;
+    padding:8px 14px;
+    border-radius:6px;
+    font-weight:700;
+}
+
+.date{
+    color:#999;
+}
+
+.patch-note h1{
+    padding:24px;
+    margin:0;
+    font-size:38px;
+}
+
+.section{
+    padding:20px 24px;
+    border-top:1px solid #1d1d1d;
+}
+
+.section h2{
+    color:#ff8a2a;
+    margin-bottom:15px;
+}
+
+.item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:10px 0;
+    color:#d0d0d0;
+}
+
+.item::before{
+    content:"✔";
+    color:#00d46a;
+    font-weight:bold;
+}
+/* ==========================================
+   ДЕКОРАТИВНЫЕ УГЛЫ
+========================================== */
+
+.update-card .corner{
+    display:none;
+}
+
+.update-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:18px;
+    height:18px;
+    border-top:2px solid #666;
+    border-left:2px solid #666;
+    background:none;
+    transform:none;
+}
+
+.update-card::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:18px;
+    height:18px;
+    border-right:2px solid #666;
+    border-bottom:2px solid #666;
+    background:none;
+    opacity:1;
+    box-shadow:none;
+}
+
+.update-card:hover::before,
+.update-card:hover::after{
+    border-color:#ff6200;
+}
+/* Полностью убираем декоративные уголки у карточек обновлений */
+
+.update-card::before,
+.update-card::after,
+.update-head::before,
+.update-head::after,
+.update-title::before,
+.update-title::after,
+.update-category::before,
+.update-category::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Если используются дополнительные corner-элементы */
+
+.update-card .corner,
+.update-head .corner,
+.update-title .corner,
+.update-category .corner {
+    display: none !important;
+}
+/* ======================================================
+            ЕДИНЫЙ ФОН СТРАНИЦЫ
+====================================================== */
+
+.section,
+.team-section,
+.updates-section,
+.cta,
+#events,
+#vehicles,
+#team,
+#updates,
+#faq{
+
+    background:inherit;
+
+}
+#events,
+#vehicles,
+#team,
+#updates{
+    scroll-margin-top: 95px;
+}
+.vehicle-showcase{
+
+    max-width:1400px;
+    margin:80px auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:80px;
+
+}
+
+.vehicle-tag{
+
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid rgba(255,122,0,.3);
+    border-radius:30px;
+
+    color:#ff7a00;
+
+    letter-spacing:2px;
+    font-size:13px;
+
+    margin-bottom:20px;
+
+}
+
+.vehicle-info h2{
+
+    color:#ff8b2d;
+    font-size:58px;
+    margin-bottom:35px;
+
+}
+
+.vehicle-info ul{
+
+    list-style:none;
+    padding:0;
+
+}
+
+.vehicle-info li{
+
+    color:#d6d6d6;
+    font-size:20px;
+
+    margin:18px 0;
+
+    position:relative;
+    padding-left:28px;
+
+}
+
+.vehicle-info li::before{
+
+    content:"";
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#ff7a00;
+
+    position:absolute;
+
+    left:0;
+    top:12px;
+
+    box-shadow:0 0 10px #ff7a00;
+
+}
+
+.vehicle-btn{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:18px 38px;
+
+    background:#ff7a00;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    font-weight:700;
+
+}
+
+.vehicle-image{
+
+    display:flex;
+    justify-content:center;
+
+}
+
+.vehicle-image img{
+
+    width:110%;
+    max-width:900px;
+
+    filter:drop-shadow(0 0 35px rgba(255,122,0,.2));
+
+    transition:.4s;
+
+}
+
+.vehicle-showcase:hover img{
+
+    transform:scale(1.03);
+
+}
+/* ==========================================
+   VEHICLE SHOWCASE
+========================================== */
+
+.vehicle-showcase{
+
+    display:grid;
+
+    grid-template-columns:430px 1fr;
+
+    align-items:stretch;
+
+    margin-top:70px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:#0d0d0d;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.vehicle-panel{
+
+    padding:60px;
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+
+    border-right:1px solid rgba(255,255,255,.12);
+
+}
+
+.vehicle-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:25px;
+
+    color:white;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+
+}
+
+.vehicle-panel h3{
+
+    font-size:52px;
+
+    color:white;
+
+    margin-bottom:25px;
+
+}
+
+.vehicle-panel p{
+
+    color:#cfcfcf;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
+.vehicle-panel ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.vehicle-panel li{
+
+    position:relative;
+
+    padding-left:26px;
+
+    margin:18px 0;
+
+    color:#dddddd;
+
+}
+
+.vehicle-panel li::before{
+
+    content:"";
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#ff6200;
+
+    position:absolute;
+
+    left:0;
+
+    top:10px;
+
+}
+
+.vehicle-preview{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.vehicle-preview img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.4s;
+
+}
+
+.vehicle-showcase:hover img{
+
+    transform:scale(1.03);
+
+}
+/*=============================
+        EVENTS
+==============================*/
+
+.events-main{
+
+    position:relative;
+
+    max-width:1200px;
+
+    margin:0 auto 70px;
+
+    padding:60px;
+
+    border-radius:30px;
+
+    background:rgba(22,14,10,.92);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,140,0,.28);
+
+    overflow:hidden;
+
+}
+
+.events-main::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.04),
+            rgba(255,255,255,.015)
+        );
+
+    pointer-events:none;
+
+}
+
+.events-main h3{
+
+    color:#f0c26a;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+.events-main p{
+
+    color:#cfcfcf;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+/* сетка */
+
+.events-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+/* карточка */
+
+.event-card{
+
+    position:relative;
+
+    padding:35px;
+
+    aspect-ratio:1/1;          /* квадрат */
+
+    background:rgba(22,14,10,.92);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,140,0,.28);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+.event-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.04),
+            rgba(255,255,255,.015)
+        );
+
+    pointer-events:none;
+
+}
+
+.event-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#ff7a00;
+
+    box-shadow:0 18px 50px rgba(255,120,0,.18);
+
+}
+
+.event-id{
+
+    display:block;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    color:rgba(255,140,0,.35);
+
+    margin-bottom:18px;
+
+}
+
+.event-card h3{
+
+    color:#f0c26a;
+
+    font-size:30px;
+
+    margin-bottom:22px;
+
+    line-height:1.2;
+
+}
+
+.event-card ul{
+
+    margin:0;
+
+    padding-left:20px;
+
+}
+
+.event-card li{
+
+    color:#d8d8d8;
+
+    margin:12px 0;
+
+    line-height:1.6;
+
+}
+.event-card>*,
+.events-main>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+/* ===========================
+        VEHICLE CATEGORIES
+=========================== */
+
+.vehicle-categories{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+
+.vehicle-category{
+
+    background:#101010;
+
+    border:1px solid #2b2b2b;
+
+    border-radius:12px;
+
+    padding:45px 35px;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.vehicle-category h3{
+
+    color:#ffffff;
+
+    font-size:28px;
+
+    margin-bottom:30px;
+
+    letter-spacing:2px;
+
+}
+
+.vehicle-category span{
+
+    color:#ff6200;
+
+    font-weight:700;
+
+}
+
+.vehicle-category:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#ff6200;
+
+    box-shadow:0 0 25px rgba(255,98,0,.2);
+
+}
+
+@media(max-width:1000px){
+
+.vehicle-categories{
+
+grid-template-columns:1fr;
+
+}
+
+}
+.vehicle-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+.vehicle-list a{
+
+background:#101010;
+
+border:1px solid #2b2b2b;
+
+padding:20px 25px;
+
+border-radius:10px;
+
+color:white;
+
+text-decoration:none;
+
+font-size:22px;
+
+transition:.3s;
+
+}
+
+.vehicle-list a:hover{
+
+border-color:#ff6200;
+
+padding-left:35px;
+
+color:#ff6200;
+
+}

@@ -1,0 +1,47 @@
+body{
+
+    margin:0;
+    overflow:hidden;
+    background:#090909;
+
+}
+
+#viewer{
+
+    width:100vw;
+    height:100vh;
+
+}
+
+.panel{
+
+    position:absolute;
+
+    top:25px;
+    left:25px;
+
+    background:rgba(15,15,15,.9);
+
+    border:1px solid #ff7a00;
+
+    padding:20px;
+
+    border-radius:10px;
+
+}
+
+.back{
+
+    color:#ff7a00;
+
+    text-decoration:none;
+
+}
+
+h2{
+
+    color:white;
+
+    margin-top:15px;
+
+}

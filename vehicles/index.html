@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Siege of SVO</title>
+
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+    <div class="sparks"></div>
+    <div class="scanline"></div>
+    <div class="scanline-vertical"></div>
+    <div class="cursor-light"></div>
+    
+    <div id="explosion-container"></div>
+    <div id="cooldown-popup"></div>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span class="siege">SIEGE</span>
+            <span class="of">of</span>
+            <span class="svo">SVO</span>
+
+        </div>
+
+        <nav>
+
+            <a href="#events" data-lang="nav_events">
+                Об ивентах
+            </a>
+
+            <a href="vehicles.html"> <data-lang="nav_vehicles">
+                Техника
+            </a>
+
+            <a href="#team" data-lang="nav_team">
+                Команда
+            </a>
+
+            <a href="#updates" data-lang="nav_updates">
+                Обновления
+            </a>
+
+        </nav>
+
+        <div class="right">
+
+        
+
+            <a class="join-top"
+               href="https://discord.gg/7cjc6wmrK"
+               target="_blank">
+
+                УЧАСТВОВАТЬ
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="hero-box">
+
+                <h1>
+
+                    <span class="gold">SIEGE</span>
+
+                    <span class="gold-small">of</span>
+
+                    <span class="orange">SVO</span>
+
+                </h1>
+
+                <div class="line"></div>
+
+                <p data-lang="hero_description">
+
+                    Создавайте собственное ЧВК и добивайтесь победы,
+                    продумывайте тактику и учитесь сражаться.
+
+                </p>
+
+                <div class="buttons">
+
+                    <a class="join"
+                       href="https://discord.gg/7cjc6wmrK"
+                       target="_blank">
+
+                        УЧАСТВОВАТЬ
+
+                    </a>
+
+                    <a class="vehicles"
+                       href="#vehicles">
+
+                        ОСМОТР ТЕХНИКИ
+
+                    </a>
+
+                </div>
+
+                <div class="scroll">
+
+                    ПРОКРУТИТЕ ДЛЯ ПРОДОЛЖЕНИЯ
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= EVENTS ================= -->
+
+       <!-- ================= EVENTS ================= -->
+
+<section id="events" class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                INFORMATION
+            </span>
+
+            <h2>ОБ ИВЕНТАХ</h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+        <!-- Главное описание -->
+
+        <div class="events-main">
+
+            <h3>Siege of SVO</h3>
+
+            <p>
+                Siege of SVO — серия масштабных игровых событий,
+                посвящённых современной военной тематике.
+                Игроки объединяются в собственные ЧВК,
+                используют тяжёлую технику, авиацию,
+                беспилотники и выполняют боевые задачи
+                в составе подразделений.
+            </p>
+
+            <p>
+                Каждый сценарий имеет собственную карту,
+                уникальные цели и различные способы достижения победы.
+            </p>
+
+        </div>
+
+        <!-- Карточки -->
+
+        <div class="events-grid">
+
+            <!-- 01 -->
+
+            <div class="event-card">
+
+                <span class="event-id"></span>
+
+                <h3>Масштабные операции</h3>
+
+                <ul>
+
+                    <li>Большие PvP-сражения</li>
+
+                    <li>PvE-операции</li>
+
+                    <li>Совместные действия подразделений</li>
+
+                </ul>
+
+            </div>
+
+            <!-- 02 -->
+
+            <div class="event-card">
+
+                <span class="event-id"></span>
+
+                <h3>Современная техника</h3>
+
+                <ul>
+
+                    <li>Основные боевые танки</li>
+
+                    <li>Боевые машины пехоты</li>
+
+                    <li>Артиллерия и авиация</li>
+
+                    <li>Беспилотные летательные аппараты</li>
+
+                </ul>
+
+            </div>
+
+            <!-- 03 -->
+
+            <div class="event-card">
+
+                <span class="event-id"></span>
+
+                <h3>Тактическое командование</h3>
+
+                <ul>
+
+                    <li>Координируйте подразделения</li>
+
+                    <li>Выполняйте совместные операции</li>
+
+                </ul>
+
+            </div>
+
+            <!-- 04 -->
+
+            <div class="event-card">
+
+                <span class="event-id"></span>
+
+                <h3>Реализм</h3>
+
+                <ul>
+
+                    <li>Атмосфера современных боевых действий</li>
+
+                    <li>Максимальный упор на тактику</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+                <!-- ================= VEHICLES ================= -->
+
+        <section id="vehicles" class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                ARSENAL
+            </span>
+
+            <h2>
+                ТЕХНИКА
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p class="section-subtitle">
+                Выберите категорию техники.
+            </p>
+
+        </div>
+
+        <div class="vehicle-categories">
+
+            <a href="vehicles/heavy.html" class="vehicle-category">
+
+                <h3>ТЯЖЁЛАЯ ТЕХНИКА</h3>
+
+                <span>Перейти →</span>
+
+            </a>
+
+            <a href="vehicles/aircraft.html" class="vehicle-category">
+
+                <h3>АВИАЦИЯ</h3>
+
+                <span>Перейти →</span>
+
+            </a>
+
+            <a href="vehicles/bmp.html" class="vehicle-category">
+
+                <h3>БМП И БТР</h3>
+
+                <span>Перейти →</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= TEAM ================= -->
+
+<section id="team" class="team-section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                STAFF
+            </span>
+
+            <h2>
+                КОМАНДА
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p class="section-subtitle">
+                Люди, которые создают и развивают Siege of SVO.
+            </p>
+
+        </div>
+
+        <div class="team-cards">
+
+            <!-- Владелец -->
+
+            <div class="team-card">
+
+                <div class="team-header">
+
+                    <div class="team-icon">
+
+                        <svg viewBox="0 0 24 24" width="22" height="22">
+                            <path fill="currentColor"
+                                d="M12 2l7 3v6c0 5-3.4 9.7-7 11-3.6-1.3-7-6-7-11V5l7-3z"/>
+                        </svg>
+
+                    </div>
+
+                    <h3>ОСНОВАТЕЛЬ</h3>
+
+                </div>
+
+                <div class="team-members">
+
+                    <div class="member">
+                        <span></span>
+                        ImTheIosivStalin
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Разработчики -->
+
+            <div class="team-card">
+
+                <div class="team-header">
+
+                    <div class="team-icon">
+
+                        <svg viewBox="0 0 24 24" width="22" height="22">
+                            <path fill="currentColor"
+                                d="M8 17l-5-5 5-5 1.4 1.4L5.8 12l3.6 3.6zm8 0l-1.4-1.4 3.6-3.6-3.6-3.6L16 7l5 5z"/>
+                        </svg>
+
+                    </div>
+
+                    <h3>РАЗРАБОТЧИКИ</h3>
+
+                </div>
+
+                <div class="team-members">
+
+                    <div class="member">
+                        <span></span>
+                        ImTheIosivStalin
+                    </div>
+
+                    <div class="member">
+                        <span></span>
+                        AndrijSmychok
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Ивентмейкеры -->
+
+            <div class="team-card">
+
+                <div class="team-header">
+
+                    <div class="team-icon">
+
+                        <svg viewBox="0 0 24 24" width="22" height="22">
+                            <path fill="currentColor"
+                                d="M22 19l-6.3-6.3a5 5 0 01-6.4-6.4L3 0 0 3l6.3 6.3a5 5 0 006.4 6.4L19 22z"/>
+                        </svg>
+
+                    </div>
+
+                    <h3>ИВЕНТМЕЙКЕРЫ</h3>
+
+                </div>
+
+                <div class="team-members">
+
+                    <div class="member">
+                        <span></span>
+                        Vinula
+                    </div>
+
+                    <div class="member">
+                        <span></span>
+                        Umber_
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+                    LAST UPDATES
+===================================================== -->
+
+<section id="updates" class="section updates-section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                CHANGELOG
+            </span>
+
+            <h2>
+                ПОСЛЕДНИЕ ОБНОВЛЕНИЯ
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p class="section-subtitle">
+                Следите за последними изменениями и улучшениями проекта Siege of SVO.
+            </p>
+
+        </div>
+
+        <div class="updates-grid">
+
+            <!-- ========================= -->
+            <!-- v1.0.2 -->
+            <!-- ========================= -->
+
+            <div class="update-card">
+
+                <div class="update-head">
+
+                    <span class="version">
+                        🔔 v1.1.0
+                    </span>
+
+                    <span class="date">
+                        📅 16.07.2026
+                    </span>
+
+                </div>
+
+                <div class="update-title">
+                    🚀 Крупный релиз
+                </div>
+
+                <div class="update-category added">
+
+                    <h4>➕ Добавлено</h4>
+
+                    <ul>
+
+                        <li>✔ Новая техника</li>
+
+                        <li>✔ Улучшены эффекты стрельбы</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="update-category fixes">
+
+                    <h4>🛠 Исправления</h4>
+
+                    <ul>
+
+                        <li>✔ Попытка исправления пинга</li>
+
+                        <li>✔ Исправлены проблемы синхронизации</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- ========================= -->
+            <!-- v1.0.1 -->
+            <!-- ========================= -->
+
+            <div class="update-card">
+
+                <div class="update-head">
+
+                    <span class="version">
+                        🔔 v1.0.1
+                    </span>
+
+                    <span class="date">
+                        📅 02.05.2026
+                    </span>
+
+                </div>
+
+                <div class="update-title">
+                    ⚙ Первый патч
+                </div>
+
+                <div class="update-category optimize">
+
+                    <h4>⚙ Оптимизация</h4>
+
+                    <ul>
+
+                        <li>✔ Повышен FPS</li>
+
+                        <li>✔ Оптимизировано использование памяти</li>
+
+                        <li>✔ Добавление оптимизации в сборку</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="update-category fixes">
+
+                    <h4>🛠 Исправления</h4>
+
+                    <ul>
+
+                        <li>✔ Исправлены ошибки конфликтов модов</li>
+
+                        <li>✔ Работа над исправление интерфейса</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- ========================= -->
+            <!-- v1.0.0 -->
+            <!-- ========================= -->
+
+            <div class="update-card">
+
+                <div class="update-head">
+
+                    <span class="version">
+                        🔔 v1.0.0
+                    </span>
+
+                    <span class="date">
+                        📅 12.07.2025
+                    </span>
+
+                </div>
+
+                <div class="update-title">
+                    🚀 Первый релиз
+                </div>
+
+                <div class="update-category added">
+
+                    <h4>➕ Добавлено</h4>
+
+                    <ul>
+
+                        <li>✔ Игровой режим SVO-Realisticks</li>
+
+                        <li>✔ Более 50 моделей техники</li>
+
+                        <li>✔ Игровой режим SVO-Klassik</li>
+
+                        <li>✔ Игровой режим Siege</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="update-category map">
+
+                    <h4>🌍 Карта</h4>
+
+                    <ul>
+
+                        <li>✔ Новая карта - Лесные просторы</li>
+
+                        <li>✔ Новая карта - Пустыный вихрь</li>
+
+                        <li>✔ Новая карта - Рудничек Prime</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="update-category optimize">
+
+                    <h4>⚙ Оптимизация</h4>
+
+                    <ul>
+
+                        <li>✔ Добавлены первые моды на оптимизацию в сборку</li>
+
+                        <li>✔ Оптимизирована нагрузка для слабых ПК</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="update-category fixes">
+
+                    <h4>🛠 Исправления</h4>
+
+                    <ul>
+
+                        <li>✔ Подправка баланса всей техники</li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- ================= FAQ ================= -->
+
+        <section id="faq" class="section">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-tag">
+
+                        FAQ
+
+                    </span>
+
+                    <h2>
+
+                        ВОПРОСЫ
+
+                    </h2>
+
+                    <div class="section-line"></div>
+
+                </div>
+
+                <div class="faq-list">
+
+                    <div class="faq-item">
+
+                        <h3>
+                            Как принять участие?
+                        </h3>
+
+                        <p>
+                            Перейдите в Discord и заполните заявку.
+                        </p>
+
+                    </div>
+
+                    <div class="faq-item">
+
+                        <h3>
+                            Нужны ли моды?
+                        </h3>
+
+                        <p>
+                            Да. Полный список публикуется перед каждым
+                            мероприятием.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta">
+
+            <div class="container">
+
+                <h2>
+
+                    ГОТОВЫ К БОЮ?
+
+                </h2>
+
+                <p>
+
+                    Вступайте в Discord-сообщество и участвуйте
+                    в следующих операциях.
+
+                </p>
+
+                <a href="https://discord.gg/7cjc6wmrK"
+                   class="join"
+                   target="_blank">
+
+                    ПРИСОЕДИНИТЬСЯ
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="logo">
+
+                <span class="siege">SIEGE</span>
+
+                <span class="of">of</span>
+
+                <span class="svo">SVO</span>
+
+            </div>
+
+            <p>
+
+                © 2026 Siege of SVO. All rights reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <button id="toTop">
+        ↑
+    </button>
+
+    <!-- JS -->
+
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/explosion.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Техника | Siege of SVO</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/vehicles.css">
+
+</head>
+<body>
+
+<header class="vehicles-header">
+
+    <a href="index.html" class="back-btn">
+        ← Назад
+    </a>
+
+    <h1>ТЕХНИКА</h1>
+
+</header>
+
+<div class="vehicle-filter">
+
+    <button class="active" onclick="showCategory('tank')">
+        Тяжёлая техника
+    </button>
+
+    <button onclick="showCategory('bmp')">
+        БМП
+    </button>
+
+    <button onclick="showCategory('air')">
+        Авиация
+    </button>
+
+</div>
+
+<div class="vehicle-grid">
+
+<!-- ===================== ТАНК ===================== -->
+
+<div class="vehicle-card tank">
+
+    <img src="images/vehicles/t90m.png">
+
+    <div class="vehicle-info">
+
+        <span class="ready">
+            ● ГОТОВО
+        </span>
+
+        <a href="viewer.html?model=t90m" class="model3d">
+            ⛶ 3D
+        </a>
+
+    </div>
+
+    <h3>Т-90М</h3>
+
+</div>
+
+<!-- ===================== -->
+
+<div class="vehicle-card tank">
+
+    <img src="images/vehicles/t72b3.png">
+
+    <div class="vehicle-info">
+
+        <span class="ready">● ГОТОВО</span>
+
+        <a href="viewer.html?model=t72b3" class="model3d">
+            ⛶ 3D
+        </a>
+
+    </div>
+
+    <h3>Т-72Б3</h3>
+
+</div>
+
+<!-- ===================== БМП ===================== -->
+
+<div class="vehicle-card bmp">
+
+    <img src="images/vehicles/bmp3.png">
+
+    <div class="vehicle-info">
+
+        <span class="ready">● ГОТОВО</span>
+
+        <a href="viewer.html?model=bmp3" class="model3d">
+            ⛶ 3D
+        </a>
+
+    </div>
+
+    <h3>БМП-3</h3>
+
+</div>
+
+<!-- ===================== ВЕРТОЛЕТ ===================== -->
+
+<div class="vehicle-card air">
+
+    <img src="images/vehicles/ka52.png">
+
+    <div class="vehicle-info">
+
+        <span class="ready">● ГОТОВО</span>
+
+        <a href="viewer.html?model=ka52" class="model3d">
+            ⛶ 3D
+        </a>
+
+    </div>
+
+    <h3>Ка-52</h3>
+
+</div>
+
+</div>
+
+<script src="js/vehicles.js"></script>
+
+</body>
+</html>
