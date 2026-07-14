@@ -345,3 +345,53 @@ line-height:24px;
 }
 
 }
+/* ================= MOBILE ================= */
+
+@media screen and (max-width:768px){
+
+    /* ОБ ИВЕНТАХ */
+
+    .events-layout{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .events-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .event-card{
+        width:100%;
+        min-height:auto;
+        padding:25px;
+    }
+
+    .event-card h3{
+        font-size:34px;
+    }
+
+    .event-card p{
+        font-size:18px;
+        line-height:1.6;
+    }
+
+    /* ТЕХНИКА */
+
+    .vehicle-categories{
+        grid-template-columns:1fr;
+    }
+
+    /* ОБНОВЛЕНИЯ */
+
+    .updates-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .update-card{
+        width:100%;
+        max-width:none;
+    }
+
+}
